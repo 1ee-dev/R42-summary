@@ -1,0 +1,163 @@
+<h2><bdi>Lecture 31</bdi></h2>
+<div class="content" dir="rtl">
+  <h3><bdi>Lecture 31: Array Methods, Math Object &amp; AJAX</bdi></h3>
+
+  <h3><bdi>Summary</bdi></h3>
+  <p>
+    المحاضرة دي كانت شاملة وغطت 3 مواضيع مهمة جدًا في الجافاسكريبت: أولًا دوال التعامل مع
+    <bdi>Arrays</bdi>، تانيًا الكائن الجاهز <bdi>Math</bdi>، وأخيرًا مقدمة عن <bdi>AJAX</bdi> واللي
+    بتخلينا نجيب بيانات من السيرفر من غير ما نعمل <bdi>Reload</bdi> للصفحة.
+  </p>
+
+  <h3><bdi>Key Points</bdi></h3>
+  <ol>
+    <li>
+      <h4 data-order="1"><bdi>Array Methods</bdi>:</h4>
+      <p>
+        اتعرفنا على أهم الدوال الجاهزة للتعامل مع المصفوفات في جافاسكريبت، واللي بتسهل جدًا التعديل
+        عليها أو قراءة البيانات منها.
+      </p>
+      <ul>
+        <li>
+          <bdi>join(separator)</bdi> <i class="fa-solid fa-arrow-left"></i> بتحول المصفوفة إلى نص
+          وتفصل بين العناصر بالرمز اللي تختاره.
+        </li>
+        <li>
+          <bdi>length</bdi> <i class="fa-solid fa-arrow-left"></i> بتجيب عدد العناصر في المصفوفة.
+        </li>
+        <li>
+          <bdi>concat()</bdi> <i class="fa-solid fa-arrow-left"></i> بتدمج أكتر من مصفوفة في مصفوفة
+          جديدة.
+        </li>
+        <li>
+          <bdi>slice(start, end)</bdi> <i class="fa-solid fa-arrow-left"></i> بتقص جزء من المصفوفة
+          وتطلع مصفوفة جديدة.
+        </li>
+        <li><bdi>pop()</bdi> <i class="fa-solid fa-arrow-left"></i> بتحذف آخر عنصر.</li>
+        <li>
+          <bdi>push(value)</bdi> <i class="fa-solid fa-arrow-left"></i> بتضيف عنصر في نهاية
+          المصفوفة.
+        </li>
+        <li><bdi>shift()</bdi> <i class="fa-solid fa-arrow-left"></i> بتحذف أول عنصر.</li>
+        <li>
+          <bdi>unshift(value)</bdi> <i class="fa-solid fa-arrow-left"></i> بتضيف عنصر في أول
+          المصفوفة.
+        </li>
+      </ul>
+      <p>
+        💡 <bdi>pop()</bdi>، <bdi>push()</bdi>، <bdi>shift()</bdi>، و<bdi>unshift()</bdi>
+        <i class="fa-solid fa-arrow-left"></i> الدوال دي بتغيّر في الـ <bdi>array</bdi> الأصلي (مش
+        نسخة منه).
+      </p>
+    </li>
+
+    <li>
+      <h4 data-order="2"><bdi>Math Object</bdi>:</h4>
+      <p>الكائن الجاهز <bdi>Math</bdi> بيوفر دوال حسابية قوية وسهلة الاستخدام، زي:</p>
+      <ul>
+        <li>
+          <bdi>Math.round(5.7)</bdi> <i class="fa-solid fa-arrow-left"></i> التقريب لأقرب رقم صحيح.
+        </li>
+        <li>
+          <bdi>Math.pow(8, 4)</bdi> <i class="fa-solid fa-arrow-left"></i> بتستخدم لحساب الأسس (<bdi
+            >8</bdi
+          ><sup><bdi>4</bdi></sup
+          >). (4096)
+        </li>
+
+        <li>
+          <bdi>Math.sqrt(144)</bdi> <i class="fa-solid fa-arrow-left"></i> الجذر التربيعي. (12)
+        </li>
+        <li>
+          <bdi>Math.ceil(12.1)</bdi> <i class="fa-solid fa-arrow-left"></i> التقريب لأعلى رقم صحيح.
+          (13)
+        </li>
+        <li>
+          <bdi>Math.floor(12.9)</bdi> <i class="fa-solid fa-arrow-left"></i> التقريب لأقل رقم صحيح.
+          (12)
+        </li>
+        <li>
+          <bdi>Math.random()</bdi> <i class="fa-solid fa-arrow-left"></i> بيولد رقم عشوائي من
+          <bdi>0</bdi> لـ <bdi>1</bdi> (وممكن نضربه في <bdi>100</bdi> لو عايزين رقم عشوائي من
+          <bdi>1</bdi> لـ <bdi>100</bdi>).
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="3"><bdi>AJAX &amp; XMLHttpRequest</bdi>:</h4>
+      <p>
+        <bdi>AJAX</bdi> اختصار لـ <bdi>Asynchronous JavaScript and XML</bdi>، وهي طريقة بتخليك
+        تتعامل مع السيرفر وتجيب بيانات من غير ما تعمل <bdi>reload</bdi> للصفحة كلها. بتشتغل عن طريق
+        كائن اسمه <bdi>XMLHttpRequest</bdi>، وده اللي بنستخدمه جوه الكود.
+      </p>
+      <p>خطوات التنفيذ:</p>
+      <ul>
+        <li>
+          <bdi>var xhttp = new XMLHttpRequest();</bdi> <i class="fa-solid fa-arrow-left"></i> بنعمل
+          كائن جديد للتعامل مع الطلب.
+        </li>
+        <li>
+          <bdi>xhttp.onreadystatechange = function() { ... }</bdi>
+          <i class="fa-solid fa-arrow-left"></i> بنحدد دالة تتنفذ كل مرة حالة الطلب تتغير فيها.
+        </li>
+        <li>
+          <bdi>readyState</bdi> بتوضح المرحلة اللي فيها الطلب:
+          <ul>
+            <li><bdi>0</bdi> <i class="fa-solid fa-arrow-left"></i> لسه الطلب متعملش.</li>
+            <li><bdi>1</bdi> <i class="fa-solid fa-arrow-left"></i> جاري التجهيز.</li>
+            <li><bdi>2</bdi> <i class="fa-solid fa-arrow-left"></i> السيرفر استقبل الطلب.</li>
+            <li><bdi>3</bdi> <i class="fa-solid fa-arrow-left"></i> جاري معالجة البيانات.</li>
+            <li><bdi>4</bdi> <i class="fa-solid fa-arrow-left"></i> الرد جاهز.</li>
+          </ul>
+        </li>
+        <li>
+          <bdi>status</bdi> بتوضح نتيجة الطلب:
+          <ul>
+            <li><bdi>200</bdi> <i class="fa-solid fa-arrow-left"></i> تم بنجاح ✅</li>
+            <li><bdi>403</bdi> <i class="fa-solid fa-arrow-left"></i> مرفوض 🚫</li>
+            <li><bdi>404</bdi> <i class="fa-solid fa-arrow-left"></i> الصفحة مش موجودة ❌</li>
+          </ul>
+        </li>
+        <li>
+          <bdi>xhttp.open("GET", "url", true)</bdi> <i class="fa-solid fa-arrow-left"></i> بنحدد نوع
+          الطلب (<bdi>GET</bdi> أو <bdi>POST</bdi>)، والرابط، ونوعه (غير متزامن <bdi>true</bdi> أو
+          متزامن <bdi>false</bdi>).
+        </li>
+        <li><bdi>xhttp.send()</bdi> <i class="fa-solid fa-arrow-left"></i> بتبعت الطلب للسيرفر.</li>
+        <li>
+          لما الشرط <bdi>if (this.readyState == 4 && this.status == 200)</bdi> يتحقق، بنقدر نستخدم
+          الرد - وغالبًا بنحوله من <bdi>JSON</bdi> باستخدام
+          <bdi>JSON.parse(this.responseText)</bdi>.
+        </li>
+      </ul>
+      <p>مثال:</p>
+      <pre><bdi>function code() {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(JSON.parse(this.responseText));
+    }
+  };
+
+  xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", false);
+  xhttp.send();
+}
+      </bdi></pre>
+      <p>
+        💡 <bdi>AJAX</bdi> بتخليك تعرض بيانات أو تحدث جزء من الصفحة من غير ما تعمل
+        <bdi>refresh</bdi> كامل - وده بيخلي الموقع أسرع في الاستخدام.
+      </p>
+    </li>
+  </ol>
+
+  <h3><bdi>Notes</bdi></h3>
+  <ul>
+    <li>
+      💡 استخدم <bdi>JSON.parse()</bdi> لتحويل البيانات الجاية من السيرفر إلى كائنات قابلة للقراءة.
+    </li>
+    <li>⚙️ <bdi>AJAX</bdi> بيفتح الباب للتعامل مع <bdi>APIs</bdi> بشكل مباشر وسهل.</li>
+    <li>🎲 دالة <bdi>Math.random()</bdi> مفيدة جدًا في اختيار أرقام أو عناصر عشوائية.</li>
+  </ul>
+</div>

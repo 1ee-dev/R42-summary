@@ -1,0 +1,134 @@
+<h2><bdi>Lecture 4</bdi></h2>
+<div class="content" dir="rtl">
+  <h3><bdi>Lecture 4: CSS Types, Selectors & Lists</bdi></h3>
+  <h3><bdi>Summary</bdi></h3>
+  <p>
+    المحاضرة دي كانت عن الطرق المختلفة لكتابة تنسيقات <bdi>CSS</bdi> في صفحات الويب، واتكلمنا عن
+    الفرق بين <bdi>inline</bdi> و<bdi>internal</bdi> و<bdi>external stylesheets</bdi>، وكمان عرفنا
+    إزاي نستخدم <bdi>class</bdi> و<bdi>id</bdi> لتطبيق تنسيقات معينة على عناصر معينة. بعد كده
+    اتعلمنا إزاي نعمل القوائم (مرتبة وغير مرتبة) باستخدام
+    <bdi>&lt;ul&gt;</bdi> و<bdi>&lt;ol&gt;</bdi>، واتكلمنا عن شوية خصائص زي <bdi>border</bdi> و<bdi
+      >border-radius</bdi
+    >
+    اللي بتدي شكل جميل للعناصر.
+  </p>
+  <h3><bdi>Key Points</bdi></h3>
+  <ol>
+    <li>
+      <h4 data-order="1"><bdi>CSS Types</bdi>:</h4>
+      <p>فيه 3 طرق نكتب بيهم التنسيقات في <bdi>CSS</bdi>:</p>
+      <pre><bdi>/* 1. Inline CSS */
+&lt;p style="color: blue; font-size: 16px;"&gt;Hello World&lt;/p&gt;
+
+/* 2. Internal CSS */
+&lt;style&gt;
+p {
+  color: blue;
+  font-size: 16px;
+}
+&lt;/style&gt;
+
+/* 3. External CSS (style.css) */
+&lt;link rel="stylesheet" href="style.css"&gt;</bdi></pre>
+      <p>حيث:</p>
+      <ul>
+        <li>
+          <bdi>Inline</bdi> <i class="fa-solid fa-arrow-left"></i> التنسيق بيتكتب جوه التاج نفسه
+          باستخدام خاصية <bdi>style</bdi>.
+        </li>
+        <li>
+          <bdi>Internal</bdi> <i class="fa-solid fa-arrow-left"></i> بيتكتب جوه صفحة
+          <bdi>HTML</bdi> في تاج <bdi>&lt;style&gt;</bdi>.
+        </li>
+        <li>
+          <bdi>External</bdi> <i class="fa-solid fa-arrow-left"></i> بنربط ملف <bdi>.css</bdi> خارجي
+          عن طريق <bdi>&lt;link&gt;</bdi>.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h4 data-order="2"><bdi>Selectors</bdi>:</h4>
+      <p>اتكلمنا عن طريقتين أساسيّتين لتحديد العناصر في <bdi>CSS</bdi>:</p>
+      <pre><bdi>/* Class selector */
+.highlighted {
+  background-color: yellow;
+  color: black;
+}
+
+/* ID selector */
+#header {
+  font-size: 24px;
+  color: blue;
+}</bdi></pre>
+      <p>حيث:</p>
+      <ul>
+        <li>
+          <bdi>class</bdi> <i class="fa-solid fa-arrow-left"></i> بتستخدم مع نقطة (.) للتنسيق على
+          عدة عناصر
+        </li>
+        <li>
+          <bdi>id</bdi> <i class="fa-solid fa-arrow-left"></i> بتستخدم مع (#) للتنسيق على عنصر واحد
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="3"><bdi>Buttons Styling</bdi>:</h4>
+      <p>اتعلمنا إزاي نغيّر شكل الأزرار باستخدام خصائص مختلفة:</p>
+      <pre><bdi>.button {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #45a049;
+  border-radius: 8px;
+  padding: 10px 20px;
+}</bdi></pre>
+      <p>حيث:</p>
+      <ul>
+        <li>
+          <bdi>background-color</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد لون الخلفية
+        </li>
+        <li><bdi>color</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد لون النص</li>
+        <li>
+          <bdi>border</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد نوع وحجم ولون الإطار
+        </li>
+        <li><bdi>border-radius</bdi> <i class="fa-solid fa-arrow-left"></i> لتدوير الحواف</li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="4"><bdi>Lists</bdi>:</h4>
+      <p>اتعلمنا نعمل نوعين من القوائم:</p>
+      <ul>
+        <li>
+          <bdi>&lt;ul&gt; - Unordered List</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة بنقط.
+        </li>
+        <li>
+          <bdi>&lt;ol&gt; - Ordered List</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة مرقّمة
+          أو بحروف.
+        </li>
+      </ul>
+      <p>واستخدمنا خاصية <bdi>type</bdi> لتغيير شكل الترقيم في <bdi>&lt;ol&gt;</bdi>.</p>
+    </li>
+
+    <li>
+      <h4 data-order="5"><bdi>CSS Colors & Backgrounds</bdi>:</h4>
+      <p>
+        اتكلمنا عن خاصيتي <bdi>background-color</bdi> و<bdi>color</bdi>، واللي بنستخدمهم لتغيير
+        خلفية العنصر ولون النص. في الأمثلة استخدمنا ألوان زي الأحمر، الأزرق، والأخضر لتطبيق عملي على
+        العناصر المختلفة.
+      </p>
+    </li>
+  </ol>
+  <h3><bdi>Notes</bdi></h3>
+  <ul>
+    <li>💡 اشتغل دايمًا باستخدام <bdi>external CSS</bdi> عشان التنسيق يكون منفصل وسهل التعديل.</li>
+    <li>
+      ⚙️ استخدم <bdi>class</bdi> لو هتكرّر نفس التنسيق على أكتر من عنصر، و<bdi>id</bdi> لو العنصر
+      فريد.
+    </li>
+    <li>
+      🎨 جرّب بنفسك تغيّر في <bdi>background</bdi> و<bdi>border</bdi> عشان تشوف التأثير العملي.
+    </li>
+    <li>🧠 فهمك لأساسيات التنسيق دي هيساعدك تبني صفحات منظمة واحترافية أكتر.</li>
+  </ul>
+</div>

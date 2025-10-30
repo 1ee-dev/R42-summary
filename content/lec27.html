@@ -1,0 +1,121 @@
+<h2><bdi>Lecture 27</bdi></h2>
+<div class="content" dir="rtl">
+  <h3><bdi>Lecture 27: Conditions, Logical Operators &amp; Functions in JavaScript</bdi></h3>
+  <h3><bdi>Summary</bdi></h3>
+  <p>
+    في المحاضرة دي اتعلمنا إزاي نتحكم في سير البرنامج باستخدام الشروط (<bdi>conditions</bdi>) زي
+    <bdi>if</bdi> و<bdi>switch</bdi>، واتكلمنا كمان عن العمليات المنطقية
+    <bdi>(Logical Operators)</bdi> اللي بتخلينا نربط أكتر من شرط مع بعض. وفي الجزء التاني من
+    المحاضرة بدأنا نفهم يعني إيه <bdi>functions</bdi> وليه بنستخدمها لتقسيم الكود وتنظيمه.
+  </p>
+  <h3><bdi>Key Points</bdi></h3>
+  <ol>
+    <li>
+      <h4 data-order="1"><bdi>If Condition</bdi>:</h4>
+      <p>بنستخدمها علشان ننفّذ جزء معين من الكود لو الشرط اتحقق. الصيغة العامة:</p>
+      <pre><bdi>if (condition) { ... } else if (...) { ... } else { ... }</bdi></pre>
+      <p>مثال:</p>
+      <pre><bdi>var deg = prompt("enter the degree");
+if (deg >= 85) {
+  console.log("Excellent");
+} else if (deg >= 75) {
+  console.log("Very Good");
+} else if (deg >= 65) {
+  console.log("Good");
+} else if (deg >= 50) {
+  console.log("Accepted");
+} else {
+  console.log("Failed");
+}</bdi></pre>
+    </li>
+    <li>
+      <h4 data-order="2"><bdi>Logical Operators</bdi>:</h4>
+      <p>العمليات المنطقية بتستخدم لدمج الشروط داخل <bdi>if</bdi>، وهي:</p>
+      <ul>
+        <li>
+          <bdi>&amp;&amp;</bdi> <i class="fa-solid fa-arrow-left"></i> <bdi>AND</bdi> <i class="fa-solid fa-arrow-left"></i> (كل الشروط
+          لازم تكون صحيحة)
+        </li>
+        <li>
+          <bdi>||</bdi> <i class="fa-solid fa-arrow-left"></i> <bdi>OR</bdi> <i class="fa-solid fa-arrow-left"></i> (يكفي شرط واحد يكون
+          صحيح)
+        </li>
+        <li>
+          <bdi>!</bdi> <i class="fa-solid fa-arrow-left"></i> <bdi>NOT</bdi> <i class="fa-solid fa-arrow-left"></i> (يعكس النتيجة
+          المنطقية)
+        </li>
+      </ul>
+      <p>مثال:</p>
+      <pre><bdi>var x = 50, y = 100;
+if (x == 50 && y == 100) {
+  console.log("True");
+} else {
+  console.log("False");
+}</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="3"><bdi>Comparison Operators</bdi>:</h4>
+      <ul>
+        <li><bdi>==</bdi> <i class="fa-solid fa-arrow-left"></i> مقارنة القيم فقط</li>
+        <li><bdi>===</bdi> <i class="fa-solid fa-arrow-left"></i> مقارنة القيم والنوع معًا</li>
+        <li><bdi>!=</bdi> <i class="fa-solid fa-arrow-left"></i> لا يساوي</li>
+        <li>
+          <bdi>&gt; , &lt; , &gt;= , &lt;=</bdi> <i class="fa-solid fa-arrow-left"></i> للمقارنات
+          الحسابية
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="4"><bdi>Switch Case</bdi>:</h4>
+      <p>بنستخدم <bdi>switch</bdi> لما يكون عندنا قيم متعددة ممكن يحصل بناءً عليها تنفيذ مختلف.</p>
+      <p>مثال:</p>
+      <pre><bdi>var x = prompt("enter your choice");
+switch(x) {
+  case "a":
+    console.log("Car");
+    break;
+  case "b":
+    console.log("iPhone 17");
+    break;
+  case "c":
+    console.log("10,000 LE");
+    break;
+  default:
+    console.log("Invalid choice");
+}</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="5"><bdi>Functions</bdi>:</h4>
+      <p>
+        <bdi>Functions</bdi> هي وسيلة لإعادة استخدام الكود بدل ما نكرره، وبتتكون من تعريف
+        (<bdi>definition</bdi>) واستدعاء (<bdi>call</bdi>).
+      </p>
+      <p>الصيغة:</p>
+      <pre><bdi>function name(parameter1, parameter2) { ... }</bdi></pre>
+      <p>مثال:</p>
+
+      <pre><bdi>function multiply(a, b) {
+  console.log(a * b);
+}
+multiply(8, 10);</bdi></pre>
+      <p>كمان ممكن نعمل دوال بتجمع أو تطرح أو تقسم بنفس الطريقة:</p>
+      <pre><bdi>function sum(x, y) {
+  console.log(x + y);
+}
+
+function divide(a, b) {
+  console.log(a / b);
+}</bdi></pre>
+    </li>
+  </ol>
+  <h3><bdi>Notes</bdi></h3>
+  <ul>
+    <li>🧠 استخدم <bdi>if</bdi> لما يكون عندك شرط واحد أو أكتر بشكل بسيط.</li>
+    <li>💡 استخدم <bdi>switch</bdi> بدل <bdi>if</bdi> لما تكون القيم محددة مسبقًا.</li>
+    <li>⚙️ الدوال بتخليك تعيد استخدام الكود وتخليه منظم أكتر.</li>
+    <li>🚀 جرب تعمل دالة تجمع بين شرط ودالة - زي دالة بتحسب النتيجة وتطبع التقدير.</li>
+  </ul>
+</div>

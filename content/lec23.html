@@ -1,0 +1,127 @@
+<h2><bdi>Lecture 23</bdi></h2>
+<div class="content" dir="rtl">
+  <h3><bdi>Lecture 23: Flexbox Layout & Alignment</bdi></h3>
+  <h3><bdi>Summary</bdi></h3>
+  <p>
+    في المحاضرة دي بدأنا نتعلم نظام <bdi>Flexbox</bdi> في <bdi>CSS</bdi> واللي بيستخدم لترتيب
+    العناصر بسهولة ومرونة في الاتجاهات المختلفة من غير ما نحتاج نستخدم <bdi>float</bdi> أو
+    <bdi>position</bdi>. عرفنا إزاي نتحكم في الاتجاه، المحاذاة، المسافات، وترتيب العناصر داخل
+    الحاوية الرئيسية (<bdi>parent</bdi>).
+  </p>
+  <h3><bdi>Key Points</bdi></h3>
+  <ol>
+    <li>
+      <h4 data-order="1"><bdi>Display: flex;</bdi>:</h4>
+      <p>
+        الخاصية دي بنضيفها على العنصر الأب علشان نخلي العناصر اللي جواه (الأبناء) تشتغل بنظام
+        <bdi>Flexbox</bdi>.
+      </p>
+    </li>
+    <li>
+      <h4 data-order="2"><bdi>Flex Direction</bdi>:</h4>
+      <p>بتحدد اتجاه العناصر داخل الحاوية:</p>
+      <ul>
+        <li>
+          <bdi>row</bdi> (افتراضي) <i class="fa-solid fa-arrow-left"></i> العناصر جنب بعض من اليسار
+          لليمين.
+        </li>
+        <li>
+          <bdi>column</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر فوق بعض من الأعلى للأسفل.
+        </li>
+      </ul>
+      <p>مثال:</p>
+      <pre><bdi>flex-direction: row;</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="3"><bdi>Justify-Content</bdi>:</h4>
+      <p>بتتحكم في محاذاة العناصر على المحور الرئيسي (<bdi>main axis</bdi>):</p>
+      <ul>
+        <li>
+          <bdi>flex-start</bdi> <i class="fa-solid fa-arrow-left"></i> كل العناصر ناحية البداية.
+        </li>
+        <li>
+          <bdi>flex-end</bdi> <i class="fa-solid fa-arrow-left"></i> كل العناصر ناحية النهاية.
+        </li>
+        <li><bdi>center</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر في المنتصف.</li>
+        <li>
+          <bdi>space-between</bdi> <i class="fa-solid fa-arrow-left"></i> توزيع العناصر بأطراف
+          متباعدة.
+        </li>
+        <li>
+          <bdi>space-around</bdi> <i class="fa-solid fa-arrow-left"></i> مسافات متساوية حوالين كل
+          عنصر.
+        </li>
+        <li>
+          <bdi>space-evenly</bdi> <i class="fa-solid fa-arrow-left"></i> مسافات متساوية بين كل
+          العناصر.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="4"><bdi>Align-Items</bdi>:</h4>
+      <p>بتتحكم في محاذاة العناصر على المحور العمودي (<bdi>cross axis</bdi>):</p>
+      <ul>
+        <li>
+          <bdi>flex-start</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر في أعلى الحاوية.
+        </li>
+        <li><bdi>flex-end</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر في أسفل الحاوية.</li>
+        <li><bdi>center</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر في منتصف الارتفاع.</li>
+        <li>
+          <bdi>stretch</bdi> <i class="fa-solid fa-arrow-left"></i> العناصر تمتد لتملأ المساحة.
+        </li>
+        <li>
+          <bdi>baseline</bdi> <i class="fa-solid fa-arrow-left"></i> محاذاة على أساس الخط النصي.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h4 data-order="5"><bdi>Order</bdi>:</h4>
+      <p>
+        الخاصية <bdi>order</bdi> بتغير ترتيب ظهور العناصر في الصفحة من غير ما نغيّر مكانها في الكود.
+        القيمة الأصغر بتظهر أولاً.
+      </p>
+      <p>مثال:</p>
+      <pre><bdi>.div2 { order: 1; }</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="6"><bdi>Align-Self</bdi>:</h4>
+      <p>بتُستخدم لتغيير محاذاة عنصر معين فقط داخل الحاوية، من غير ما تأثر على الباقيين.</p>
+      <p>مثال:</p>
+      <pre><bdi>.div1 { align-self: flex-start; }</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="7"><bdi>Flex-Grow / Flex-Shrink / Flex-Basis</bdi>:</h4>
+      <p>خصائص مهمة للتحكم في تمدد أو تقلص حجم العناصر:</p>
+      <ul>
+        <li>
+          <bdi>flex-grow</bdi> <i class="fa-solid fa-arrow-left"></i> يحدد مدى تمدد العنصر لملء
+          المساحة الفارغة.
+        </li>
+        <li>
+          <bdi>flex-shrink</bdi> <i class="fa-solid fa-arrow-left"></i> يحدد مدى تقلص العنصر عند ضيق
+          المساحة.
+        </li>
+        <li>
+          <bdi>flex-basis</bdi> <i class="fa-solid fa-arrow-left"></i> يحدد الحجم الأساسي للعنصر قبل
+          حساب التمدد أو التقلص.
+        </li>
+      </ul>
+      <p>ممكن نكتبهم مع بعض في خاصية واحدة:</p>
+      <pre><bdi>flex: grow shrink basis;</bdi></pre>
+    </li>
+  </ol>
+  <h3><bdi>Notes</bdi></h3>
+  <ul>
+    <li>💡 <bdi>main axis</bdi> بيتحدد حسب اتجاه <bdi>flex-direction</bdi>.</li>
+    <li>
+      🎯 استخدم <bdi>justify-content</bdi> للمحور الرئيسي و<bdi>align-items</bdi> للمحور العمودي.
+    </li>
+    <li>⚙️ <bdi>order</bdi> مفيد جدًا لما تحب تغيّر ترتيب العناصر من غير تعديل الكود.</li>
+    <li>🧠 خاصية <bdi>flex</bdi> بتختصر 3 خصائص في سطر واحد لتسهيل كتابة الكود.</li>
+  </ul>
+</div>

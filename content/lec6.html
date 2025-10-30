@@ -1,0 +1,120 @@
+<h2><bdi>Lecture 6</bdi></h2>
+<div class="content" dir="rtl">
+  <h3><bdi>Lecture 6: Text Formatting & Background Styling</bdi></h3>
+  <h3><bdi>Summary</bdi></h3>
+  <p>
+    المحاضرة دي كانت عن تنسيق النصوص باستخدام وسوم <bdi>HTML</bdi> الخاصة بالشكل، واتكلمنا عن الفرق
+    بين الوسوم اللي بتأثر على الشكل فقط، واللي كمان بتدي معنى لمحركات البحث زي
+    <bdi>&lt;strong&gt;</bdi> و<bdi>&lt;em&gt;</bdi>. بعد كده دخلنا على الخلفيات في <bdi>CSS</bdi>،
+    واتعرفنا على خصائص زي اللون، الصورة، طريقة التكرار، الموضع، وكمان شفنا خاصية
+    <bdi>background</bdi> المختصرة اللي بتجمع كل ده في سطر واحد.
+  </p>
+  <h3><bdi>Key Points</bdi></h3>
+  <ol>
+    <li>
+      <h4 data-order="1"><bdi>Formatting Tags</bdi>:</h4>
+      <p>الوسوم دي بتتحكم في شكل النصوص داخل الصفحة، ومن أهمها:</p>
+      <ul>
+        <li>
+          <bdi>&lt;i&gt;</bdi> و<bdi>&lt;em&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيخلوا
+          النص مائل، بس <bdi>em</bdi> ليها معنى تأكيدي.
+        </li>
+        <li>
+          <bdi>&lt;b&gt;</bdi> و<bdi>&lt;strong&gt;</bdi>
+          <i class="fa-solid fa-arrow-left"></i> بيخلوا النص عريض، و<bdi>strong</bdi> بتدل على أهمية
+          أكتر.
+        </li>
+        <li>
+          <bdi>&lt;mark&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتظليل النص كأنه متعلم
+          عليه.
+        </li>
+        <li><bdi>&lt;small&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتصغير حجم النص.</li>
+        <li>
+          <bdi>&lt;del&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيعمل خط على النص (زي
+          الأسعار القديمة).
+        </li>
+        <li>
+          <bdi>&lt;ins&gt;</bdi> و<bdi>&lt;u&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لعمل
+          خط تحت النص، و<bdi>ins</bdi> معناها إدخال نص جديد.
+        </li>
+        <li>
+          <bdi>&lt;sub&gt;</bdi> و<bdi>&lt;sup&gt;</bdi>
+          <i class="fa-solid fa-arrow-left"></i> لكتابة النص تحت أو فوق السطر، زي
+          <bdi>H<sub>2</sub>O</bdi> أو <bdi>9<sup>3</sup></bdi
+          >.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h4 data-order="2"><bdi>Textarea</bdi>:</h4>
+      <p>
+        الوسم <bdi>&lt;textarea&gt;</bdi> بنستخدمه لكتابة نصوص طويلة زي الرسائل أو التعليقات. نقدر
+        نتحكم في عدد <bdi>rows</bdi> و<bdi>cols</bdi>، وكمان نحط <bdi>placeholder</bdi> كإرشاد
+        للمستخدم.
+      </p>
+    </li>
+
+    <li>
+      <h4 data-order="3"><bdi>CSS Background</bdi>:</h4>
+      <p>اتعرفنا على أهم خصائص الخلفية في <bdi>CSS</bdi>:</p>
+      <ul>
+        <li>
+          <bdi>background-color</bdi> <i class="fa-solid fa-arrow-left"></i> لتغيير لون الخلفية.
+        </li>
+        <li>
+          <bdi>background-image</bdi> <i class="fa-solid fa-arrow-left"></i> لإضافة صورة خلفية.
+        </li>
+        <li>
+          <bdi>background-repeat</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد هل الصورة تتكرر
+          ولا لأ (زي <bdi>no-repeat</bdi>).
+        </li>
+        <li>
+          <bdi>background-attachment</bdi> <i class="fa-solid fa-arrow-left"></i> لتثبيت الخلفية
+          أثناء التمرير (زي <bdi>fixed</bdi>).
+        </li>
+        <li>
+          <bdi>background-position</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد مكان الصورة
+          (زي <bdi>center</bdi>).
+        </li>
+      </ul>
+      <p>وكمان شفنا الصيغة المختصرة:</p>
+      <pre><bdi>background: blue url(../images/trainer-1.jpg) no-repeat fixed center;</bdi></pre>
+    </li>
+
+    <li>
+      <h4 data-order="4"><bdi>Background in Elements</bdi>:</h4>
+      <p>
+        جربنا نحط خلفية جوه <bdi>div</bdi> باستخدام <bdi>background-image</bdi>، وكمان استخدمنا
+        <bdi>background-size: cover;</bdi> علشان الصورة تملأ العنصر بالكامل.
+      </p>
+    </li>
+
+    <li>
+      <h4 data-order="5"><bdi>Universal Selector (*) Reset</bdi>:</h4>
+      <p>قبل أي تصميم بنستخدم <bdi>*</bdi> لعمل إعادة ضبط للعناصر. الكود:</p>
+      <pre><bdi>* { margin: 0; padding: 0; box-sizing: border-box; }</bdi></pre>
+      <ul>
+        <li>
+          <bdi>margin: 0;</bdi> <i class="fa-solid fa-arrow-left"></i> يشيل المسافات الخارجية.
+        </li>
+        <li>
+          <bdi>padding: 0;</bdi> <i class="fa-solid fa-arrow-left"></i> يشيل المسافات الداخلية.
+        </li>
+        <li>
+          <bdi>box-sizing: border-box;</bdi> <i class="fa-solid fa-arrow-left"></i> يخلي حجم العنصر
+          يشمل <bdi>border</bdi> و<bdi>padding</bdi>.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h3><bdi>Notes</bdi></h3>
+  <ul>
+    <li>
+      💡 استخدم الوسوم الدلالية زي <bdi>&lt;strong&gt;</bdi> و<bdi>&lt;em&gt;</bdi> بدل
+      <bdi>&lt;b&gt;</bdi> و<bdi>&lt;i&gt;</bdi> لأنها مفيدة لمحركات البحث.
+    </li>
+    <li>🎨 الخلفيات بتدي روح للتصميم، بس حاول تستخدم صور خفيفة عشان السرعة.</li>
+    <li>⚙️ خاصية <bdi>background-size: cover;</bdi> بتضمن إن الصورة تملأ العنصر من غير تشويه.</li>
+    <li>🧠 كل خاصية ليها تأثير على تجربة المستخدم وشكل الموقع النهائي.</li>
+  </ul>
+</div>
