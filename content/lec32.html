@@ -1,0 +1,139 @@
+<h3><bdi>Lecture 32: Introduction to Bootstrap</bdi></h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  المحاضرة دي كانت عن إطار العمل الشهير <bdi>Bootstrap</bdi> اللي بيساعدنا نصمم صفحات ويب متجاوبة
+  بسرعة وسهولة من غير ما نكتب كود <bdi>CSS</bdi> كتير. الإطار ده معمول على <bdi>HTML</bdi> و
+  <bdi>CSS</bdi> و <bdi>JavaScript</bdi>، وبيوفر مكونات جاهزة زي الأزرار، الجداول، النوافذ المنبثقة،
+  النظام الشبكي (Grid System)، وغيرها.
+</p>
+
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1">ما هو <bdi>Bootstrap</bdi>?</h4>
+    <p>
+      <bdi>Bootstrap</bdi> هو إطار عمل (<bdi>Framework</bdi>) جاهز بيجمع أدوات التنسيق في ملفات
+      <bdi>CSS</bdi> و <bdi>JS</bdi> بحيث تقدر تعمل تصميم احترافي بسرعة. اتطور في البداية من شركة
+      <bdi>Twitter</bdi> علشان يوحدوا شكل واجهاتهم.
+    </p>
+  </li>
+
+  <li>
+    <h4 data-order="2">طريقة ربط <bdi>Bootstrap</bdi> بالموقع</h4>
+    <p>عندنا طريقتين رئيسيتين:</p>
+    <ul>
+      <li>
+        <bdi>CDN</bdi> (الطريقة الأسهل) <i class="fa-solid fa-arrow-left"></i> بنضيف روابط مكتبات <bdi>Bootstrap</bdi> الجاهزة في
+        <bdi>&lt;head&gt;</bdi>.
+      </li>
+      <li><bdi>Download</bdi> <i class="fa-solid fa-arrow-left"></i> نحمل الملفات ونربطها يدويًا من مجلد المشروع.</li>
+    </ul>
+
+    <p>مثال باستخدام <bdi>CDN</bdi>:</p>
+    <pre><bdi>(ملفات <bdi>css</bdi>)
+&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+(ملفات <bdi>js</bdi>)
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"&gt;&lt;/script&gt;</bdi></pre>
+  </li>
+
+  <li>
+    <h4 data-order="3"><bdi>Grid System</bdi>:</h4>
+    <p>
+      من أهم مميزات <bdi>Bootstrap</bdi> هو نظام الشبكة (<bdi>Grid</bdi>) اللي بيساعدك ترتب العناصر
+      في 12 عمود. كل صف بيتقسم لـ 12 جزء، وتقدر تحدد حجم كل عنصر حسب عدد الأعمدة اللي هياخدها.
+    </p>
+    <pre><bdi>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;Box 1&lt;/div&gt;
+    &lt;div class="col-4"&gt;Box 2&lt;/div&gt;
+    &lt;div class="col-4"&gt;Box 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</bdi></pre>
+
+    <p>في المثال ده كل عنصر واخد 4 أعمدة من أصل 12، يعني 3 عناصر متساوية في صف واحد.</p>
+  </li>
+
+  <li>
+    <h4 data-order="4"><bdi>Responsive Design</bdi>:</h4>
+    <p>
+      <bdi>Bootstrap</bdi> بيتميز إنه <bdi>Responsive</bdi> يعني التصميم بيتكيف تلقائيًا مع حجم
+      الشاشة سواء موبايل أو تابلت أو كمبيوتر. وده من خلال الـ <code>breakpoints</code>:
+    </p>
+    <ul>
+      <li>
+        <bdi>.col-sm-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;576px</bdi>)
+        للشاشات الصغيرة (موبايل) و الأكبر منها.
+      </li>
+      <li>
+        <bdi>.col-md-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;678px</bdi>)
+        للشاشات المتوسطة (تابلت) و الأكبر منها.
+      </li>
+      <li>
+        <bdi>.col-lg-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;992px</bdi>)
+        للشاشات الكبيرة (لابتوب) و الأكبر منها.
+      </li>
+      <li>
+        <bdi>.col-xl-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;1200px</bdi>)
+        للشاشات الأكبر (ديسكتوب) و الأكبر منها.
+      </li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>&lt;div class="col-sm-12 col-md-6 col-lg-4"&gt;Responsive Box&lt;/div&gt;</bdi></pre>
+  </li>
+
+  <li>
+    <h4 data-order="5">المكونات الجاهزة (<bdi>Components</bdi>):</h4>
+    <p>
+      <bdi>Bootstrap</bdi> بيحتوي على مكونات كتير جاهزة ممكن تستخدمها فورًا من غير كود
+      <bdi>CSS</bdi> إضافي:
+    </p>
+    <ul>
+      <li>
+        <bdi>Buttons</bdi> <i class="fa-solid fa-arrow-left"></i> أزرار بألوان جاهزة زي <bdi>.btn-primary</bdi> و <bdi>.btn-danger</bdi>.
+      </li>
+      <li>
+        <bdi>Alerts</bdi> <i class="fa-solid fa-arrow-left"></i> تنبيهات جاهزة زي <bdi>.alert-success</bdi> أو <bdi>.alert-warning</bdi>.
+      </li>
+      <li><bdi>Cards</bdi> <i class="fa-solid fa-arrow-left"></i> لعرض المحتوى في مربعات أنيقة.</li>
+      <li><bdi>Navbar</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة تنقل جاهزة وسهلة التخصيص.</li>
+    </ul>
+
+    <pre><bdi>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;
+&lt;div class="alert alert-success"&gt;تمت العملية بنجاح!&lt;/div&gt;</bdi></pre>
+  </li>
+
+  <li>
+    <h4 data-order="6">ألوان <bdi>Bootstrap</bdi>:</h4>
+    <p>
+      بيقدم <bdi>Bootstrap</bdi> مجموعة ألوان جاهزة ممكن تستخدمها مباشرة للأزرار أو الخلفيات أو
+      النصوص:
+    </p>
+    <ul>
+      <li><bdi>.text-primary</bdi> / <bdi>.bg-primary</bdi></li>
+      <li><bdi>.text-success</bdi> / <bdi>.bg-success</bdi></li>
+      <li><bdi>.text-danger</bdi> / <bdi>.bg-danger</bdi></li>
+      <li><bdi>.text-warning</bdi> / <bdi>.bg-warning</bdi></li>
+      <li><bdi>.text-info</bdi> / <bdi>.bg-info</bdi></li>
+    </ul>
+  </li>
+
+  <li>
+    <h4 data-order="7"><bdi>Bootstrap JavaScript Components</bdi>:</h4>
+    <p>
+      المكونات اللي بتحتاج <bdi>JavaScript</bdi> زي <bdi>Modal</bdi> (النوافذ المنبثقة)،
+      <bdi>Carousel</bdi> (السلايدر)، و <bdi>Dropdown</bdi> (القوائم المنسدلة) بتشتغل تلقائيًا لما
+      نربط ملف <bdi>bootstrap.min.js</bdi>.
+    </p>
+  </li>
+</ol>
+
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li>💡 <bdi>Bootstrap</bdi> بيوفرلك تصميم احترافي بسرعة من غير ما تكتب كود كتير.</li>
+  <li>⚙️ دايمًا اربط ملف <bdi>JS</bdi> بتاع <bdi>Bootstrap</bdi> بعد <bdi>CSS</bdi>.</li>
+  <li>📱 استخدم نظام الأعمدة لتصميم صفحات متجاوبة مع كل الأجهزة.</li>
+  <li>🎨 تقدر تعدل على ستايلات <bdi>Bootstrap</bdi> بسهولة باستخدام ملف <bdi>CSS</bdi> منفصل.</li>
+  <li>📚 لازم تبحث وتتعلم أكتر عن <bdi>Bootstrap</bdi> لوحدك، لأن المكتبة كبيرة وفيها حاجات كتير مش هنقدر نغطيها كلها. زور <a href="https://getbootstrap.com/docs/" target="_blank">الموقع الرسمي</a> وجرب المكونات المختلفة.</li>
+</ul>

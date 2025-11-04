@@ -155,9 +155,14 @@ const lectures = [
     title: 'Lecture 31',
     group: 'JavaScript',
   },
+  {
+    id: 'lec32',
+    title: 'Lecture 32',
+    group: 'Bootstrap',
+  },
 ];
 
-const groups = ['HTML & CSS', 'GitHub', 'HTML5 & CSS3', 'JavaScript'];
+const groups = ['HTML & CSS', 'GitHub', 'HTML5 & CSS3', 'JavaScript', 'Bootstrap'];
 
 // get all lectures by group
 function getLecturesByGroup(group) {
