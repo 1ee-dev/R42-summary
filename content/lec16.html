@@ -1,129 +1,120 @@
-<h2><bdi>Lecture 16</bdi></h2>
-<div class="content" dir="rtl">
-  <h3><bdi>Lecture 16: Input Attributes, Required Fields &amp; HTML Entities</bdi></h3>
-  <h3><bdi>Summary</bdi></h3>
-  <p>
-    المحاضرة دي ركزت على خصائص جديدة ومهمة في <bdi>&lt;input&gt;</bdi>، واللي بتساعد في التحكم في
-    طريقة إدخال البيانات وتفاعل المستخدم معاها. كمان اتكلمنا عن عناصر إضافية زي
-    <bdi>&lt;video&gt;</bdi> و<bdi>&lt;audio&gt;</bdi> وشفنا إزاي نقدر نستخدم أكثر من مصدر في نفس
-    الوسائط. وأخيرًا، اتكلمنا عن <bdi>HTML Entities</bdi> اللي بنستخدمها لعرض رموز خاصة زي &lt;,
-    &gt;, &copy; من غير ما المتصفح يفسرها ككود.
-  </p>
-  <h3><bdi>Key Points</bdi></h3>
-  <ol>
-    <li>
-      <h4 data-order="1"><bdi>Input Attributes</bdi>:</h4>
-      <p>اتكلمنا عن خصائص كتير بتأثر على سلوك الحقول:</p>
-      <ul>
-        <li>
-          <bdi>required</bdi> <i class="fa-solid fa-arrow-left"></i> بيجبر المستخدم يدخل قيمة قبل
-          الإرسال.
-        </li>
-        <li>
-          <bdi>readonly</bdi> <i class="fa-solid fa-arrow-left"></i>
-          بيخلي الحقل قابل للقراءة فقط، لكن قيمته تتبعت مع الفورم, و يقدر ياخد
-          <bdi>focus</bdi> (يعني المستخدم يقدر يختار النص أو ينسخه).
-        </li>
-        <li>
-          <bdi>disabled</bdi> <i class="fa-solid fa-arrow-left"></i>
-          بيوقف الحقل تمامًا، ومش بيتبعت في الفورم, و ما بياخدش
-          <bdi>focus</bdi> نهائيًا، ولا يمكن التفاعل معاه.
-        </li>
-        <li>
-          <bdi>multiple</bdi> <i class="fa-solid fa-arrow-left"></i> بيسمح باختيار أكتر من ملف أو
-          قيمة (زي في <bdi>file</bdi>).
-        </li>
-        <li>
-          <bdi>size</bdi> <i class="fa-solid fa-arrow-left"></i> بيحدد عرض الحقل بعدد الحروف
-          الظاهرة.
-        </li>
-        <li>
-          <bdi>value</bdi> <i class="fa-solid fa-arrow-left"></i> القيمة الافتراضية داخل الحقل.
-        </li>
-      </ul>
-      <p>مثال:</p>
-      <pre><bdi>&lt;input type="text" value="Pay attention!!" <span>readonly</span>&gt;</bdi></pre>
-    </li>
-    <li>
-      <h4 data-order="2"><bdi>:required &amp; :optional</bdi>:</h4>
-      <p>دي <bdi>pseudo-classes</bdi> بنستخدمها علشان ننسق الحقول الإلزامية أو الاختيارية:</p>
-      <ul>
-        <li>
-          <bdi>input:required { background-color: red; }</bdi>
-          <i class="fa-solid fa-arrow-left"></i> الحقول الإلزامية.
-        </li>
-        <li>
-          <bdi>input:optional { background-color: greenyellow; }</bdi>
-          <i class="fa-solid fa-arrow-left"></i> الحقول الاختيارية.
-        </li>
-      </ul>
-    </li>
+<h3><bdi>Lecture 16: Input Attributes, Required Fields &amp; HTML Entities</bdi></h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  المحاضرة دي ركزت على خصائص جديدة ومهمة في <bdi>&lt;input&gt;</bdi>، واللي بتساعد في التحكم في
+  طريقة إدخال البيانات وتفاعل المستخدم معاها. كمان اتكلمنا عن عناصر إضافية زي
+  <bdi>&lt;video&gt;</bdi> و<bdi>&lt;audio&gt;</bdi> وشفنا إزاي نقدر نستخدم أكثر من مصدر في نفس
+  الوسائط. وأخيرًا، اتكلمنا عن <bdi>HTML Entities</bdi> اللي بنستخدمها لعرض رموز خاصة زي &lt;, &gt;,
+  &copy; من غير ما المتصفح يفسرها ككود.
+</p>
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1"><bdi>Input Attributes</bdi>:</h4>
+    <p>اتكلمنا عن خصائص كتير بتأثر على سلوك الحقول:</p>
+    <ul>
+      <li>
+        <bdi>required</bdi> <i class="fa-solid fa-arrow-left"></i> بيجبر المستخدم يدخل قيمة قبل
+        الإرسال.
+      </li>
+      <li>
+        <bdi>readonly</bdi> <i class="fa-solid fa-arrow-left"></i>
+        بيخلي الحقل قابل للقراءة فقط، لكن قيمته تتبعت مع الفورم, و يقدر ياخد
+        <bdi>focus</bdi> (يعني المستخدم يقدر يختار النص أو ينسخه).
+      </li>
+      <li>
+        <bdi>disabled</bdi> <i class="fa-solid fa-arrow-left"></i>
+        بيوقف الحقل تمامًا، ومش بيتبعت في الفورم, و ما بياخدش
+        <bdi>focus</bdi> نهائيًا، ولا يمكن التفاعل معاه.
+      </li>
+      <li>
+        <bdi>multiple</bdi> <i class="fa-solid fa-arrow-left"></i> بيسمح باختيار أكتر من ملف أو قيمة
+        (زي في <bdi>file</bdi>).
+      </li>
+      <li>
+        <bdi>size</bdi> <i class="fa-solid fa-arrow-left"></i> بيحدد عرض الحقل بعدد الحروف الظاهرة.
+      </li>
+      <li><bdi>value</bdi> <i class="fa-solid fa-arrow-left"></i> القيمة الافتراضية داخل الحقل.</li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>&lt;input type="text" value="Pay attention!!" <span>readonly</span>&gt;</bdi></pre>
+  </li>
+  <li>
+    <h4 data-order="2"><bdi>:required &amp; :optional</bdi>:</h4>
+    <p>دي <bdi>pseudo-classes</bdi> بنستخدمها علشان ننسق الحقول الإلزامية أو الاختيارية:</p>
+    <ul>
+      <li>
+        <bdi>input:required { background-color: red; }</bdi>
+        <i class="fa-solid fa-arrow-left"></i> الحقول الإلزامية.
+      </li>
+      <li>
+        <bdi>input:optional { background-color: greenyellow; }</bdi>
+        <i class="fa-solid fa-arrow-left"></i> الحقول الاختيارية.
+      </li>
+    </ul>
+  </li>
 
-    <li>
-      <h4 data-order="3"><bdi>Input Validation Attributes</bdi>:</h4>
-      <p>زي <bdi>minlength</bdi> و<bdi>maxlength</bdi> لتحديد أقل وأقصى عدد حروف في الحقل.</p>
-      <p>مثال:</p>
-      <pre><bdi>&lt;input type="password" minlength="8" maxlength="16"&gt;</bdi></pre>
-      <p>لو المستخدم كتب أقل من 8 حروف، المتصفح هيعرض رسالة خطأ تلقائيًا.</p>
-    </li>
+  <li>
+    <h4 data-order="3"><bdi>Input Validation Attributes</bdi>:</h4>
+    <p>زي <bdi>minlength</bdi> و<bdi>maxlength</bdi> لتحديد أقل وأقصى عدد حروف في الحقل.</p>
+    <p>مثال:</p>
+    <pre><bdi>&lt;input type="password" minlength="8" maxlength="16"&gt;</bdi></pre>
+    <p>لو المستخدم كتب أقل من 8 حروف، المتصفح هيعرض رسالة خطأ تلقائيًا.</p>
+  </li>
 
-    <li>
-      <h4 data-order="4"><bdi>Self-Closing Tags</bdi>:</h4>
-      <p>اتكلمنا عن العناصر اللي بتقفل نفسها ومش بتحتاج تاج إغلاق، زي:</p>
-      <ul>
-        <li><bdi>&lt;img&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لعرض الصور.</li>
-        <li>
-          <bdi>&lt;source&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد مصدر الفيديو أو
-          الصوت.
-        </li>
-        <li><bdi>&lt;br&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للنزول لسطر جديد.</li>
-        <li>
-          <bdi>&lt;wbr&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيسمح بكسر الكلمة الطويلة لو
-          احتاج المتصفح.
-        </li>
-      </ul>
-      <p>
-        <bdi>source</bdi> بتتكتب داخل <bdi>&lt;video&gt;</bdi> أو <bdi>&lt;audio&gt;</bdi> بالشكل
-        ده:
-      </p>
-      <pre><bdi>&lt;video width="380" controls&gt;
+  <li>
+    <h4 data-order="4"><bdi>Self-Closing Tags</bdi>:</h4>
+    <p>اتكلمنا عن العناصر اللي بتقفل نفسها ومش بتحتاج تاج إغلاق، زي:</p>
+    <ul>
+      <li><bdi>&lt;img&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لعرض الصور.</li>
+      <li>
+        <bdi>&lt;source&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد مصدر الفيديو أو
+        الصوت.
+      </li>
+      <li><bdi>&lt;br&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للنزول لسطر جديد.</li>
+      <li>
+        <bdi>&lt;wbr&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيسمح بكسر الكلمة الطويلة لو
+        احتاج المتصفح.
+      </li>
+    </ul>
+    <p>
+      <bdi>source</bdi> بتتكتب داخل <bdi>&lt;video&gt;</bdi> أو <bdi>&lt;audio&gt;</bdi> بالشكل ده:
+    </p>
+    <pre><bdi>&lt;video width="380" controls&gt;
 &lt;source src="videos/mov.mp4" type="video/mp4" /&gt;
 &lt;source src="videos/mov.ogg" type="video/ogg" /&gt; // (optional) only works when first source isn't supported
 &lt;/video&gt;</bdi></pre>
-    </li>
+  </li>
 
-    <li>
-      <h4 data-order="5"><bdi>HTML Entities</bdi>:</h4>
-      <p>
-        لما نحب نعرض رموز خاصة في الصفحة زي &lt; و &gt; أو علامات © و®، بنستخدم
-        <bdi>Entities</bdi> بالشكل ده:
-      </p>
-      <ul>
-        <li><bdi>&amp;lt;</bdi> <i class="fa-solid fa-arrow-left"></i> &lt;</li>
-        <li><bdi>&amp;gt;</bdi> <i class="fa-solid fa-arrow-left"></i> &gt;</li>
-        <li><bdi>&amp;nbsp;</bdi> <i class="fa-solid fa-arrow-left"></i> مسافة إضافية.</li>
-        <li><bdi>&amp;copy;</bdi> <i class="fa-solid fa-arrow-left"></i> © (حقوق الملكية).</li>
-      </ul>
-      <p>مثال:</p>
-      <pre><bdi>&lt;h2&gt;Islam &amp;nbsp; &amp;nbsp; Mohamed&lt;/h2&gt;
+  <li>
+    <h4 data-order="5"><bdi>HTML Entities</bdi>:</h4>
+    <p>
+      لما نحب نعرض رموز خاصة في الصفحة زي &lt; و &gt; أو علامات © و®، بنستخدم
+      <bdi>Entities</bdi> بالشكل ده:
+    </p>
+    <ul>
+      <li><bdi>&amp;lt;</bdi> <i class="fa-solid fa-arrow-left"></i> &lt;</li>
+      <li><bdi>&amp;gt;</bdi> <i class="fa-solid fa-arrow-left"></i> &gt;</li>
+      <li><bdi>&amp;nbsp;</bdi> <i class="fa-solid fa-arrow-left"></i> مسافة إضافية.</li>
+      <li><bdi>&amp;copy;</bdi> <i class="fa-solid fa-arrow-left"></i> © (حقوق الملكية).</li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>&lt;h2&gt;Islam &amp;nbsp; &amp;nbsp; Mohamed&lt;/h2&gt;
 result <i class="fa-solid fa-arrow-right"></i> Islam &nbsp; &nbsp; Mohamed</bdi></pre>
-    </li>
-  </ol>
-  <h3><bdi>Notes</bdi></h3>
-  <ul>
-    <li>💡 استخدم <bdi>required</bdi> دايمًا مع الحقول المهمة في الفورم.</li>
-    <li>
-      🎯 الفرق بين <bdi>readonly</bdi> و<bdi>disabled</bdi> إن الأول بيتبعت في الفورم والتاني لا.
-    </li>
-    <li>
-      🖱️ <bdi>readonly</bdi> بياخد <bdi>focus</bdi> لكن <bdi>disabled</bdi> لا، ودي نقطة مهمة جدًا
-      في تجربة المستخدم.
-    </li>
-    <li>
-      🎵 عناصر <bdi>video</bdi> و<bdi>audio</bdi> بتحتاج مصادر بديلة علشان تشتغل في كل المتصفحات.
-    </li>
-    <li>
-      🧠 استخدم <bdi>&amp;entities;</bdi> لما تحب تكتب رموز خاصة من غير ما المتصفح يعتبرها كود.
-    </li>
-  </ul>
-</div>
+  </li>
+</ol>
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li>💡 استخدم <bdi>required</bdi> دايمًا مع الحقول المهمة في الفورم.</li>
+  <li>
+    🎯 الفرق بين <bdi>readonly</bdi> و<bdi>disabled</bdi> إن الأول بيتبعت في الفورم والتاني لا.
+  </li>
+  <li>
+    🖱️ <bdi>readonly</bdi> بياخد <bdi>focus</bdi> لكن <bdi>disabled</bdi> لا، ودي نقطة مهمة جدًا في
+    تجربة المستخدم.
+  </li>
+  <li>
+    🎵 عناصر <bdi>video</bdi> و<bdi>audio</bdi> بتحتاج مصادر بديلة علشان تشتغل في كل المتصفحات.
+  </li>
+  <li>🧠 استخدم <bdi>&amp;entities;</bdi> لما تحب تكتب رموز خاصة من غير ما المتصفح يعتبرها كود.</li>
+</ul>

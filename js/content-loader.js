@@ -192,7 +192,11 @@ async function fetchLectureContent() {
   const lectureContentPromises = lectures.map(async (lec) => {
     const response = await fetch(`content/${lec.id}.html`);
     const content = await response.text();
-    return `<article id="${lec.id}">${content}</article>`;
+    return `<article id="${lec.id}">
+<h2><bdi>${lec.title}</bdi></h2>
+<div class="content" dir="rtl">
+${content}
+</div></article>`;
   });
 
   const lectureContentHtml = await Promise.all(lectureContentPromises);

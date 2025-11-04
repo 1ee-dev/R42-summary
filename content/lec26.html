@@ -1,141 +1,134 @@
-<h2><bdi>Lecture 26</bdi></h2>
-<div class="content" dir="rtl">
-  <h3><bdi>Lecture 26: Data Types &amp; Operators in JavaScript</bdi></h3>
-  <h3><bdi>Summary</bdi></h3>
-  <p>
-    في المحاضرة دي بدأنا نتعمق في لغة <bdi>JavaScript</bdi> واتكلمنا عن أنواع البيانات المختلفة اللي
-    ممكن نخزنها في المتغيرات، واتعرفنا على أهم العمليات الحسابية والمنطقية اللي بنستخدمها داخل
-    الكود. الهدف كان إننا نفهم إزاي الـ <bdi>JavaScript</bdi> بتتعامل مع القيم وأنواعها.
-  </p>
-  <h3><bdi>Key Points</bdi></h3>
-  <ol>
-    <li>
-      <h4 data-order="1">أنواع البيانات (<bdi>Data Types</bdi>):</h4>
-      <p>
-        أنواع البيانات في JavaScript بتحدد شكل القيمة اللي بنخزنها في المتغير، وأشهر الأنواع هي:
-      </p>
-      <ul>
-        <li><bdi>Number</bdi> <i class="fa-solid fa-arrow-left"></i> الأرقام زي 10 أو 3.14</li>
-        <li>
-          <bdi>String</bdi> <i class="fa-solid fa-arrow-left"></i> النصوص بين علامات تنصيص زي
-          "<bdi>Hello</bdi>"
-        </li>
-        <li>
-          <bdi>Boolean</bdi> <i class="fa-solid fa-arrow-left"></i> القيم المنطقية (<bdi
-            >true / false</bdi
-          >)
-        </li>
-        <li>
-          <bdi>Array</bdi> <i class="fa-solid fa-arrow-left"></i> مجموعة بيانات مرتبة داخل أقواس
-          مربعة [ ]
-        </li>
-        <li>
-          <bdi>Object</bdi> <i class="fa-solid fa-arrow-left"></i> بيانات غير مرتبة داخل أقواس
-          معقوفة { }
-        </li>
-        <li><bdi>Null</bdi> <i class="fa-solid fa-arrow-left"></i> قيمة فارغة (لا شيء)</li>
-        <li>
-          <bdi>Undefined</bdi> <i class="fa-solid fa-arrow-left"></i> متغير متعرف لكن لم يُسند له أي
-          قيمة
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h4 data-order="2">المصفوفات (<bdi>Arrays</bdi>):</h4>
-      <p>المصفوفة هي مجموعة من القيم المرتبة، كل عنصر له رقم فهرس (index) يبدأ من 0.</p>
-      <pre><bdi>var x = ["ahmed", "islam", 500, true, "eman"];</bdi></pre>
-      <p>
-        <bdi>x[0]</bdi> <i class="fa-solid fa-arrow-left"></i> ترجع أول عنصر في المصفوفة، و
-        <bdi>x.length</bdi>
-        <i class="fa-solid fa-arrow-left"></i> ترجع عدد العناصر.
-      </p>
-    </li>
+<h3><bdi>Lecture 26: Data Types &amp; Operators in JavaScript</bdi></h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  في المحاضرة دي بدأنا نتعمق في لغة <bdi>JavaScript</bdi> واتكلمنا عن أنواع البيانات المختلفة اللي
+  ممكن نخزنها في المتغيرات، واتعرفنا على أهم العمليات الحسابية والمنطقية اللي بنستخدمها داخل الكود.
+  الهدف كان إننا نفهم إزاي الـ <bdi>JavaScript</bdi> بتتعامل مع القيم وأنواعها.
+</p>
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1">أنواع البيانات (<bdi>Data Types</bdi>):</h4>
+    <p>أنواع البيانات في JavaScript بتحدد شكل القيمة اللي بنخزنها في المتغير، وأشهر الأنواع هي:</p>
+    <ul>
+      <li><bdi>Number</bdi> <i class="fa-solid fa-arrow-left"></i> الأرقام زي 10 أو 3.14</li>
+      <li>
+        <bdi>String</bdi> <i class="fa-solid fa-arrow-left"></i> النصوص بين علامات تنصيص زي
+        "<bdi>Hello</bdi>"
+      </li>
+      <li>
+        <bdi>Boolean</bdi> <i class="fa-solid fa-arrow-left"></i> القيم المنطقية (<bdi
+          >true / false</bdi
+        >)
+      </li>
+      <li>
+        <bdi>Array</bdi> <i class="fa-solid fa-arrow-left"></i> مجموعة بيانات مرتبة داخل أقواس مربعة
+        [ ]
+      </li>
+      <li>
+        <bdi>Object</bdi> <i class="fa-solid fa-arrow-left"></i> بيانات غير مرتبة داخل أقواس معقوفة
+        { }
+      </li>
+      <li><bdi>Null</bdi> <i class="fa-solid fa-arrow-left"></i> قيمة فارغة (لا شيء)</li>
+      <li>
+        <bdi>Undefined</bdi> <i class="fa-solid fa-arrow-left"></i> متغير متعرف لكن لم يُسند له أي
+        قيمة
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 data-order="2">المصفوفات (<bdi>Arrays</bdi>):</h4>
+    <p>المصفوفة هي مجموعة من القيم المرتبة، كل عنصر له رقم فهرس (index) يبدأ من 0.</p>
+    <pre><bdi>var x = ["ahmed", "islam", 500, true, "eman"];</bdi></pre>
+    <p>
+      <bdi>x[0]</bdi> <i class="fa-solid fa-arrow-left"></i> ترجع أول عنصر في المصفوفة، و
+      <bdi>x.length</bdi>
+      <i class="fa-solid fa-arrow-left"></i> ترجع عدد العناصر.
+    </p>
+  </li>
 
-    <li>
-      <h4 data-order="3">الكائنات (<bdi>Objects</bdi>):</h4>
-      <p>الكائن بيخزن بيانات في شكل أزواج (اسم وقيمة)، وبيُستخدم لتنظيم المعلومات بشكل أوضح.</p>
-      <pre><bdi>var person = {
+  <li>
+    <h4 data-order="3">الكائنات (<bdi>Objects</bdi>):</h4>
+    <p>الكائن بيخزن بيانات في شكل أزواج (اسم وقيمة)، وبيُستخدم لتنظيم المعلومات بشكل أوضح.</p>
+    <pre><bdi>var person = {
 name: "islam",
 age: 29,
 city: "mansoura"
 };</bdi></pre>
-      <p>
-        الوصول لأي خاصية بيكون عن طريق النقطة <i class="fa-solid fa-arrow-left"></i>
-        <bdi>person.city</bdi>
-      </p>
-    </li>
+    <p>
+      الوصول لأي خاصية بيكون عن طريق النقطة <i class="fa-solid fa-arrow-left"></i>
+      <bdi>person.city</bdi>
+    </p>
+  </li>
 
-    <li>
-      <h4 data-order="4">القيم الخاصة <bdi>Null</bdi> و <bdi>Undefined</bdi>:</h4>
-      <ul>
-        <li>
-          <bdi>null</bdi> <i class="fa-solid fa-arrow-left"></i> معناها إن القيمة فاضية تمامًا.
-        </li>
-        <li>
-          <bdi>undefined</bdi> <i class="fa-solid fa-arrow-left"></i> معناها إن المتغير اتعرف لكن
-          ملحقش ياخد قيمة.
-        </li>
-      </ul>
-      <p>مثال:</p>
-      <pre><bdi>var x = null;  // القيمة فاضية
+  <li>
+    <h4 data-order="4">القيم الخاصة <bdi>Null</bdi> و <bdi>Undefined</bdi>:</h4>
+    <ul>
+      <li><bdi>null</bdi> <i class="fa-solid fa-arrow-left"></i> معناها إن القيمة فاضية تمامًا.</li>
+      <li>
+        <bdi>undefined</bdi> <i class="fa-solid fa-arrow-left"></i> معناها إن المتغير اتعرف لكن
+        ملحقش ياخد قيمة.
+      </li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>var x = null;  // القيمة فاضية
 var y;  // القيمة undefined</bdi></pre>
-    </li>
+  </li>
 
-    <li>
-      <h4 data-order="5">العمليات الحسابية (<bdi>Arithmetic Operators</bdi>):</h4>
-      <p>دي العمليات اللي بنستخدمها في الحساب داخل الكود:</p>
-      <ul>
-        <li><bdi>+</bdi> <i class="fa-solid fa-arrow-left"></i> الجمع</li>
-        <li><bdi>-</bdi> <i class="fa-solid fa-arrow-left"></i> الطرح</li>
-        <li><bdi>*</bdi> <i class="fa-solid fa-arrow-left"></i> الضرب</li>
-        <li><bdi>/</bdi> <i class="fa-solid fa-arrow-left"></i> القسمة</li>
-        <li><bdi>%</bdi> <i class="fa-solid fa-arrow-left"></i> باقي القسمة</li>
-        <li>
-          <bdi>++</bdi> <i class="fa-solid fa-arrow-left"></i> زيادة واحد (<bdi>increment</bdi>)
-        </li>
-        <li>
-          <bdi>--</bdi> <i class="fa-solid fa-arrow-left"></i> نقصان واحد (<bdi>decrement</bdi>)
-        </li>
-        <li><bdi>**</bdi> <i class="fa-solid fa-arrow-left"></i> الأس (<bdi>exponent</bdi>)</li>
-      </ul>
-      <p>مثال:</p>
-      <pre><bdi>var num1 = 10;
+  <li>
+    <h4 data-order="5">العمليات الحسابية (<bdi>Arithmetic Operators</bdi>):</h4>
+    <p>دي العمليات اللي بنستخدمها في الحساب داخل الكود:</p>
+    <ul>
+      <li><bdi>+</bdi> <i class="fa-solid fa-arrow-left"></i> الجمع</li>
+      <li><bdi>-</bdi> <i class="fa-solid fa-arrow-left"></i> الطرح</li>
+      <li><bdi>*</bdi> <i class="fa-solid fa-arrow-left"></i> الضرب</li>
+      <li><bdi>/</bdi> <i class="fa-solid fa-arrow-left"></i> القسمة</li>
+      <li><bdi>%</bdi> <i class="fa-solid fa-arrow-left"></i> باقي القسمة</li>
+      <li>
+        <bdi>++</bdi> <i class="fa-solid fa-arrow-left"></i> زيادة واحد (<bdi>increment</bdi>)
+      </li>
+      <li>
+        <bdi>--</bdi> <i class="fa-solid fa-arrow-left"></i> نقصان واحد (<bdi>decrement</bdi>)
+      </li>
+      <li><bdi>**</bdi> <i class="fa-solid fa-arrow-left"></i> الأس (<bdi>exponent</bdi>)</li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>var num1 = 10;
 var num2 = 4;
 console.log(num1 ** num2); // 10000</bdi></pre>
-    </li>
+  </li>
 
-    <li>
-      <h4 data-order="6">العمليات المختصرة (<bdi>Assignment Operators</bdi>):</h4>
-      <p>دي طريقة مختصرة للجمع أو الطرح والتخزين في نفس الوقت. زي:</p>
-      <ul>
-        <li>
-          <bdi>x += 5</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x + 5</bdi>
-        </li>
-        <li>
-          <bdi>x -= 3</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x - 3</bdi>
-        </li>
-        <li>
-          <bdi>x *= 2</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x * 2</bdi>
-        </li>
-        <li>
-          <bdi>x /= 4</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x / 4</bdi>
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <h3><bdi>Notes</bdi></h3>
-  <ul>
-    <li>🧠 استخدم <bdi>typeof</bdi> علشان تعرف نوع أي متغير.</li>
-    <li>⚙️ <bdi>Array</bdi> بتتعامل بترتيب، أما <bdi>Object</bdi> فغير مرتب.</li>
-    <li>
-      💡 الفرق بين <bdi>null</bdi> و <bdi>undefined</bdi> إن الأولى فاضية عمدًا، والتانية لسه متحطش
-      فيها قيمة.
-    </li>
-    <li>💪 جرب العمليات بنفسك في <bdi>console</bdi> علشان تتعود على النتايج.</li>
-    <li>
-      💡 القيم زي <bdi>null</bdi>، والمصفوفات <bdi>arrays</bdi>، والكائنات <bdi>objects</bdi> كلها
-      بتتعامل في <bdi>JavaScript</bdi> ككائنات (<bdi>objects</bdi>) من حيث النوع، حتى لو بتختلف في
-      الاستخدام.
-    </li>
-  </ul>
-</div>
+  <li>
+    <h4 data-order="6">العمليات المختصرة (<bdi>Assignment Operators</bdi>):</h4>
+    <p>دي طريقة مختصرة للجمع أو الطرح والتخزين في نفس الوقت. زي:</p>
+    <ul>
+      <li>
+        <bdi>x += 5</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x + 5</bdi>
+      </li>
+      <li>
+        <bdi>x -= 3</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x - 3</bdi>
+      </li>
+      <li>
+        <bdi>x *= 2</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x * 2</bdi>
+      </li>
+      <li>
+        <bdi>x /= 4</bdi> <i class="fa-solid fa-arrow-left"></i> نفس معنى <bdi>x = x / 4</bdi>
+      </li>
+    </ul>
+  </li>
+</ol>
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li>🧠 استخدم <bdi>typeof</bdi> علشان تعرف نوع أي متغير.</li>
+  <li>⚙️ <bdi>Array</bdi> بتتعامل بترتيب، أما <bdi>Object</bdi> فغير مرتب.</li>
+  <li>
+    💡 الفرق بين <bdi>null</bdi> و <bdi>undefined</bdi> إن الأولى فاضية عمدًا، والتانية لسه متحطش
+    فيها قيمة.
+  </li>
+  <li>💪 جرب العمليات بنفسك في <bdi>console</bdi> علشان تتعود على النتايج.</li>
+  <li>
+    💡 القيم زي <bdi>null</bdi>، والمصفوفات <bdi>arrays</bdi>، والكائنات <bdi>objects</bdi> كلها
+    بتتعامل في <bdi>JavaScript</bdi> ككائنات (<bdi>objects</bdi>) من حيث النوع، حتى لو بتختلف في
+    الاستخدام.
+  </li>
+</ul>

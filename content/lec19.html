@@ -1,138 +1,133 @@
-<h2><bdi>Lecture 19</bdi></h2>
-<div class="content" dir="rtl">
-  <h3><bdi>Lecture 19: CSS Animation & Keyframes</bdi></h3>
-  <h3><bdi>Summary</bdi></h3>
-  <p>
-    المحاضرة دي كانت عن واحدة من أقوى خصائص الـ <bdi>CSS</bdi> وهي خاصية <bdi>animation</bdi> اللي
-    بتخلينا نضيف حركات ديناميكية لأي عنصر في الصفحة. اتكلمنا عن كيفية تعريف الحركة باستخدام
-    <bdi>@keyframes</bdi>، والتحكم في مدة وتكرار واتجاه وسرعة الحركة. كمان شرحنا الفرق بين أنواع
-    <bdi>animation-timing-function</bdi> المختلفة زي <bdi>ease</bdi>، <bdi>linear</bdi>،
-    <bdi>ease-in</bdi>، <bdi>ease-out</bdi>، و<bdi>ease-in-out</bdi>.
-  </p>
-  <h3><bdi>Key Points</bdi></h3>
-  <ol>
-    <li>
-      <h4 data-order="1"><bdi>@keyframes</bdi>:</h4>
-      <p>
-        الكلمة المفتاحية <bdi>@keyframes</bdi> بنستخدمها علشان نعرّف الحركة اللي العنصر هيعملها
-        أثناء الأنيميشن. كل حركة بتتحدد بنسب مئوية من مدة التنفيذ (من 0% إلى 100%):
-      </p>
-      <pre><bdi>@keyframes change {
+<h3><bdi>Lecture 19: CSS Animation & Keyframes</bdi></h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  المحاضرة دي كانت عن واحدة من أقوى خصائص الـ <bdi>CSS</bdi> وهي خاصية <bdi>animation</bdi> اللي
+  بتخلينا نضيف حركات ديناميكية لأي عنصر في الصفحة. اتكلمنا عن كيفية تعريف الحركة باستخدام
+  <bdi>@keyframes</bdi>، والتحكم في مدة وتكرار واتجاه وسرعة الحركة. كمان شرحنا الفرق بين أنواع
+  <bdi>animation-timing-function</bdi> المختلفة زي <bdi>ease</bdi>، <bdi>linear</bdi>،
+  <bdi>ease-in</bdi>، <bdi>ease-out</bdi>، و<bdi>ease-in-out</bdi>.
+</p>
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1"><bdi>@keyframes</bdi>:</h4>
+    <p>
+      الكلمة المفتاحية <bdi>@keyframes</bdi> بنستخدمها علشان نعرّف الحركة اللي العنصر هيعملها أثناء
+      الأنيميشن. كل حركة بتتحدد بنسب مئوية من مدة التنفيذ (من 0% إلى 100%):
+    </p>
+    <pre><bdi>@keyframes change {
 0% { background-color: yellow; }
 50% { background-color: blue; }
 100% { background-color: black; left: 1110px; }
 }</bdi></pre>
-      <p>ده مثال لحركة بتغير لون العنصر وتخليه يتحرك من اليسار لليمين تدريجيًا.</p>
-    </li>
-    <li>
-      <h4 data-order="2"><bdi>animation-name &amp; duration</bdi>:</h4>
-      <p>الخاصيتين دول أساس أي حركة في CSS:</p>
-      <ul>
-        <li>
-          <bdi>animation-name</bdi> <i class="fa-solid fa-arrow-left"></i> اسم الحركة اللي عرفناها
-          بـ <bdi>@keyframes</bdi>.
-        </li>
-        <li>
-          <bdi>animation-duration</bdi> <i class="fa-solid fa-arrow-left"></i> المدة اللي هتستغرقها
-          الحركة (مثلاً 3s = ثلاث ثواني).
-        </li>
-      </ul>
-      <p>مثال:</p>
-      <pre><bdi>animation-name: change; animation-duration: 3s;</bdi></pre>
-    </li>
+    <p>ده مثال لحركة بتغير لون العنصر وتخليه يتحرك من اليسار لليمين تدريجيًا.</p>
+  </li>
+  <li>
+    <h4 data-order="2"><bdi>animation-name &amp; duration</bdi>:</h4>
+    <p>الخاصيتين دول أساس أي حركة في CSS:</p>
+    <ul>
+      <li>
+        <bdi>animation-name</bdi> <i class="fa-solid fa-arrow-left"></i> اسم الحركة اللي عرفناها بـ
+        <bdi>@keyframes</bdi>.
+      </li>
+      <li>
+        <bdi>animation-duration</bdi> <i class="fa-solid fa-arrow-left"></i> المدة اللي هتستغرقها
+        الحركة (مثلاً 3s = ثلاث ثواني).
+      </li>
+    </ul>
+    <p>مثال:</p>
+    <pre><bdi>animation-name: change; animation-duration: 3s;</bdi></pre>
+  </li>
 
-    <li>
-      <h4 data-order="3"><bdi>animation-timing-function</bdi>:</h4>
-      <p>الخاصية دي بتتحكم في سرعة الحركة أثناء تنفيذها. شفنا الأنواع المختلفة منها:</p>
-      <ul>
-        <li>
-          <bdi>linear</bdi> <i class="fa-solid fa-arrow-left"></i> سرعة ثابتة من البداية للنهاية.
-        </li>
-        <li>
-          <bdi>ease</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية والنهاية وسريعة في
-          النص (القيمة الافتراضية).
-        </li>
-        <li><bdi>ease-in</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية.</li>
-        <li><bdi>ease-out</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في النهاية.</li>
-        <li>
-          <bdi>ease-in-out</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية والنهاية
-          معًا.
-        </li>
-      </ul>
-    </li>
+  <li>
+    <h4 data-order="3"><bdi>animation-timing-function</bdi>:</h4>
+    <p>الخاصية دي بتتحكم في سرعة الحركة أثناء تنفيذها. شفنا الأنواع المختلفة منها:</p>
+    <ul>
+      <li>
+        <bdi>linear</bdi> <i class="fa-solid fa-arrow-left"></i> سرعة ثابتة من البداية للنهاية.
+      </li>
+      <li>
+        <bdi>ease</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية والنهاية وسريعة في
+        النص (القيمة الافتراضية).
+      </li>
+      <li><bdi>ease-in</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية.</li>
+      <li><bdi>ease-out</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في النهاية.</li>
+      <li>
+        <bdi>ease-in-out</bdi> <i class="fa-solid fa-arrow-left"></i> بطيئة في البداية والنهاية
+        معًا.
+      </li>
+    </ul>
+  </li>
 
-    <li>
-      <h4 data-order="4"><bdi>animation-iteration-count &amp; delay</bdi>:</h4>
-      <p>
-        بنستخدم <bdi>animation-iteration-count</bdi> لتحديد عدد مرات تكرار الحركة:
-        <bdi>infinite</bdi> بتخليها تتكرر للأبد. وكمان ممكن نضيف <bdi>animation-delay</bdi> لتأخير
-        بدء الحركة.
-      </p>
-      <p>مثال:</p>
-      <pre><bdi>animation-delay: 4s; animation-iteration-count: infinite;</bdi></pre>
-    </li>
+  <li>
+    <h4 data-order="4"><bdi>animation-iteration-count &amp; delay</bdi>:</h4>
+    <p>
+      بنستخدم <bdi>animation-iteration-count</bdi> لتحديد عدد مرات تكرار الحركة:
+      <bdi>infinite</bdi> بتخليها تتكرر للأبد. وكمان ممكن نضيف <bdi>animation-delay</bdi> لتأخير بدء
+      الحركة.
+    </p>
+    <p>مثال:</p>
+    <pre><bdi>animation-delay: 4s; animation-iteration-count: infinite;</bdi></pre>
+  </li>
 
-    <li>
-      <h4 data-order="5"><bdi>animation-direction</bdi>:</h4>
-      <p>الخاصية دي بتتحكم في اتجاه تكرار الحركة:</p>
-      <ul>
-        <li>
-          <bdi>normal</bdi> <i class="fa-solid fa-arrow-left"></i> الاتجاه الطبيعي (من البداية
-          للنهاية).
-        </li>
-        <li>
-          <bdi>reverse</bdi> <i class="fa-solid fa-arrow-left"></i> بالعكس (من النهاية للبداية).
-        </li>
-        <li><bdi>alternate</bdi> <i class="fa-solid fa-arrow-left"></i> ذهاب وعودة بالتناوب.</li>
-        <li>
-          <bdi>alternate-reverse</bdi> <i class="fa-solid fa-arrow-left"></i> تبدأ بالعكس ثم ترجع.
-        </li>
-      </ul>
-    </li>
+  <li>
+    <h4 data-order="5"><bdi>animation-direction</bdi>:</h4>
+    <p>الخاصية دي بتتحكم في اتجاه تكرار الحركة:</p>
+    <ul>
+      <li>
+        <bdi>normal</bdi> <i class="fa-solid fa-arrow-left"></i> الاتجاه الطبيعي (من البداية
+        للنهاية).
+      </li>
+      <li>
+        <bdi>reverse</bdi> <i class="fa-solid fa-arrow-left"></i> بالعكس (من النهاية للبداية).
+      </li>
+      <li><bdi>alternate</bdi> <i class="fa-solid fa-arrow-left"></i> ذهاب وعودة بالتناوب.</li>
+      <li>
+        <bdi>alternate-reverse</bdi> <i class="fa-solid fa-arrow-left"></i> تبدأ بالعكس ثم ترجع.
+      </li>
+    </ul>
+  </li>
 
-    <li>
-      <h4 data-order="6"><bdi>animation-fill-mode</bdi>:</h4>
-      <p>بتتحكم في حالة العنصر قبل وبعد الأنيميشن:</p>
-      <ul>
-        <li>
-          <bdi>none</bdi> <i class="fa-solid fa-arrow-left"></i> بيرجع للوضع الطبيعي بعد انتهاء
-          الحركة.
-        </li>
-        <li>
-          <bdi>forwards</bdi> <i class="fa-solid fa-arrow-left"></i> بيحتفظ بآخر حالة بعد الانتهاء.
-        </li>
-        <li>
-          <bdi>backwards</bdi> <i class="fa-solid fa-arrow-left"></i> بياخد أول حالة قبل ما يبدأ.
-        </li>
-        <li><bdi>both</bdi> <i class="fa-solid fa-arrow-left"></i> بيجمع بين الحالتين.</li>
-      </ul>
-    </li>
+  <li>
+    <h4 data-order="6"><bdi>animation-fill-mode</bdi>:</h4>
+    <p>بتتحكم في حالة العنصر قبل وبعد الأنيميشن:</p>
+    <ul>
+      <li>
+        <bdi>none</bdi> <i class="fa-solid fa-arrow-left"></i> بيرجع للوضع الطبيعي بعد انتهاء
+        الحركة.
+      </li>
+      <li>
+        <bdi>forwards</bdi> <i class="fa-solid fa-arrow-left"></i> بيحتفظ بآخر حالة بعد الانتهاء.
+      </li>
+      <li>
+        <bdi>backwards</bdi> <i class="fa-solid fa-arrow-left"></i> بياخد أول حالة قبل ما يبدأ.
+      </li>
+      <li><bdi>both</bdi> <i class="fa-solid fa-arrow-left"></i> بيجمع بين الحالتين.</li>
+    </ul>
+  </li>
 
-    <li>
-      <h4 data-order="7"><bdi>animation-play-state</bdi>:</h4>
-      <p>الخاصية دي بتتحكم في تشغيل أو إيقاف الحركة:</p>
-      <ul>
-        <li>
-          <bdi>running</bdi> <i class="fa-solid fa-arrow-left"></i> الحالة الافتراضية (الأنيميشن
-          شغال).
-        </li>
-        <li><bdi>paused</bdi> <i class="fa-solid fa-arrow-left"></i> توقف مؤقت.</li>
-      </ul>
-      <p>ممكن نستخدمها مع <bdi>:hover</bdi></p>
-      <p>مثال:</p>
-      <pre><bdi>.div1:hover { animation-play-state: paused; }</bdi></pre>
-    </li>
-  </ol>
-  <h3><bdi>Notes</bdi></h3>
-  <ul>
-    <li>💡 استخدم <bdi>@keyframes</bdi> لما تكون عايز تتحكم في أكتر من خاصية أثناء الحركة.</li>
-    <li>
-      ⚙️ دمج خصائص الأنيميشن في سطر واحد بيكون كده:
-      <pre><bdi>animation: name duration timing-function delay iteration-count direction fill-mode;</bdi></pre>
-    </li>
-    <li>🎨 استخدم <bdi>ease-in-out</bdi> للحركات الانسيابية لأنها بتدي مظهر احترافي.</li>
-    <li>
-      🧠 خاصية <bdi>animation-play-state</bdi> مفيدة لو حبيت توقف الأنيميشن مؤقتًا وقت التفاعل.
-    </li>
-  </ul>
-</div>
+  <li>
+    <h4 data-order="7"><bdi>animation-play-state</bdi>:</h4>
+    <p>الخاصية دي بتتحكم في تشغيل أو إيقاف الحركة:</p>
+    <ul>
+      <li>
+        <bdi>running</bdi> <i class="fa-solid fa-arrow-left"></i> الحالة الافتراضية (الأنيميشن
+        شغال).
+      </li>
+      <li><bdi>paused</bdi> <i class="fa-solid fa-arrow-left"></i> توقف مؤقت.</li>
+    </ul>
+    <p>ممكن نستخدمها مع <bdi>:hover</bdi></p>
+    <p>مثال:</p>
+    <pre><bdi>.div1:hover { animation-play-state: paused; }</bdi></pre>
+  </li>
+</ol>
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li>💡 استخدم <bdi>@keyframes</bdi> لما تكون عايز تتحكم في أكتر من خاصية أثناء الحركة.</li>
+  <li>
+    ⚙️ دمج خصائص الأنيميشن في سطر واحد بيكون كده:
+    <pre><bdi>animation: name duration timing-function delay iteration-count direction fill-mode;</bdi></pre>
+  </li>
+  <li>🎨 استخدم <bdi>ease-in-out</bdi> للحركات الانسيابية لأنها بتدي مظهر احترافي.</li>
+  <li>🧠 خاصية <bdi>animation-play-state</bdi> مفيدة لو حبيت توقف الأنيميشن مؤقتًا وقت التفاعل.</li>
+</ul>

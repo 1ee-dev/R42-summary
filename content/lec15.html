@@ -1,145 +1,138 @@
-<h2><bdi>Lecture 15</bdi></h2>
-<div class="content" dir="rtl">
-  <h3><bdi>Lecture 15: HTML5 Semantic Elements, Input Types & Pseudo Classes</bdi></h3>
-  <h3><bdi>Summary</bdi></h3>
-  <p>
-    المحاضرة دي كانت بداية التعامل مع مميزات <bdi>HTML5</bdi> الحديثة. اتكلمنا عن العناصر الدلالية
-    (<bdi>semantic elements</bdi>) اللي بتوضح معنى كل جزء في الصفحة بدل ما نستخدم
-    <bdi>&lt;div&gt;</bdi> في كل حاجة. كمان اتكلمنا عن أنواع الإدخالات الجديدة في
-    <bdi>&lt;input&gt;</bdi> زي <bdi>email</bdi>، <bdi>date</bdi>، <bdi>search</bdi>، وغيرها.
-    واتعرفنا على خصائص <bdi>:in-range</bdi> و<bdi>:out-of-range</bdi>
-    اللي بتستخدم لتلوين الحقول حسب القيم اللي يدخلها المستخدم. وأخيرًا، شفنا عنصر
-    <bdi>&lt;progress&gt;</bdi> المستخدم لعرض مدى التقدم بطريقة رسومية.
-  </p>
-  <h3><bdi>Key Points</bdi></h3>
-  <ol>
-    <li>
-      <h4 data-order="1"><bdi>Semantic Elements</bdi>:</h4>
-      <p>هي عناصر بتدي معنى واضح للمتصفح والمطور عن وظيفة كل جزء في الصفحة. من أهمها:</p>
-      <ul>
-        <li>
-          <bdi>&lt;header&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> الجزء العلوي للموقع
-          (غالبًا فيه اللوجو والقائمة).
-        </li>
-        <li>
-          <bdi>&lt;nav&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيحتوي على روابط التنقل.
-        </li>
-        <li>
-          <bdi>&lt;main&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيضم المحتوى الرئيسي.
-        </li>
-        <li>
-          <bdi>&lt;section&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتقسيم الصفحة لأقسام
-          مستقلة.
-        </li>
-        <li>
-          <bdi>&lt;article&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للمقالات أو المحتوى
-          المنفصل.
-        </li>
-        <li><bdi>&lt;aside&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للمحتوى الجانبي.</li>
-        <li>
-          <bdi>&lt;footer&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> الجزء السفلي (حقوق أو
-          روابط).
-        </li>
-        <li>
-          <bdi>&lt;figure&gt;</bdi> و<bdi>&lt;figcaption&gt;</bdi>
-          <i class="fa-solid fa-arrow-left"></i> للصور والتعليقات التوضيحية.
-        </li>
-      </ul>
-      <p>العناصر دي بتخلي الكود منظم وسهل القراءة لمحركات البحث والمبرمجين.</p>
-    </li>
-    <li>
-      <h4 data-order="2"><bdi>Custom Elements</bdi>:</h4>
-      <p>
-        في المثال شفنا إنشاء عنصر جديد باسم <bdi>&lt;islam&gt;</bdi> وده باستخدام
-        <bdi>document.createElement("islam")</bdi> داخل <bdi>&lt;script&gt;</bdi>. الهدف منه هو
-        تعريف المتصفح بأي عنصر مخصص علشان يقدر يتعامل معاه بشكل طبيعي.
-      </p>
-    </li>
+<h3><bdi>Lecture 15: HTML5 Semantic Elements, Input Types & Pseudo Classes</bdi></h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  المحاضرة دي كانت بداية التعامل مع مميزات <bdi>HTML5</bdi> الحديثة. اتكلمنا عن العناصر الدلالية
+  (<bdi>semantic elements</bdi>) اللي بتوضح معنى كل جزء في الصفحة بدل ما نستخدم
+  <bdi>&lt;div&gt;</bdi> في كل حاجة. كمان اتكلمنا عن أنواع الإدخالات الجديدة في
+  <bdi>&lt;input&gt;</bdi> زي <bdi>email</bdi>، <bdi>date</bdi>، <bdi>search</bdi>، وغيرها. واتعرفنا
+  على خصائص <bdi>:in-range</bdi> و<bdi>:out-of-range</bdi>
+  اللي بتستخدم لتلوين الحقول حسب القيم اللي يدخلها المستخدم. وأخيرًا، شفنا عنصر
+  <bdi>&lt;progress&gt;</bdi> المستخدم لعرض مدى التقدم بطريقة رسومية.
+</p>
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1"><bdi>Semantic Elements</bdi>:</h4>
+    <p>هي عناصر بتدي معنى واضح للمتصفح والمطور عن وظيفة كل جزء في الصفحة. من أهمها:</p>
+    <ul>
+      <li>
+        <bdi>&lt;header&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> الجزء العلوي للموقع (غالبًا
+        فيه اللوجو والقائمة).
+      </li>
+      <li>
+        <bdi>&lt;nav&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيحتوي على روابط التنقل.
+      </li>
+      <li><bdi>&lt;main&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> بيضم المحتوى الرئيسي.</li>
+      <li>
+        <bdi>&lt;section&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> لتقسيم الصفحة لأقسام
+        مستقلة.
+      </li>
+      <li>
+        <bdi>&lt;article&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للمقالات أو المحتوى
+        المنفصل.
+      </li>
+      <li><bdi>&lt;aside&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> للمحتوى الجانبي.</li>
+      <li>
+        <bdi>&lt;footer&gt;</bdi> <i class="fa-solid fa-arrow-left"></i> الجزء السفلي (حقوق أو
+        روابط).
+      </li>
+      <li>
+        <bdi>&lt;figure&gt;</bdi> و<bdi>&lt;figcaption&gt;</bdi>
+        <i class="fa-solid fa-arrow-left"></i> للصور والتعليقات التوضيحية.
+      </li>
+    </ul>
+    <p>العناصر دي بتخلي الكود منظم وسهل القراءة لمحركات البحث والمبرمجين.</p>
+  </li>
+  <li>
+    <h4 data-order="2"><bdi>Custom Elements</bdi>:</h4>
+    <p>
+      في المثال شفنا إنشاء عنصر جديد باسم <bdi>&lt;islam&gt;</bdi> وده باستخدام
+      <bdi>document.createElement("islam")</bdi> داخل <bdi>&lt;script&gt;</bdi>. الهدف منه هو تعريف
+      المتصفح بأي عنصر مخصص علشان يقدر يتعامل معاه بشكل طبيعي.
+    </p>
+  </li>
 
-    <li>
-      <h4 data-order="3"><bdi>HTML5shiv</bdi>:</h4>
-      <p>
-        دي مكتبة كانت بتستخدم زمان علشان متصفحات قديمة زي <bdi>Internet Explorer 9</bdi> تقدر تقرأ
-        عناصر <bdi>HTML5</bdi> الجديدة. اتكلمنا عنها في الكود التعليقي باستخدام الشرط:
-      </p>
-      <pre><bdi>&lt;!-- [if it IE 9] --&gt; &lt;script src="js/html5shiv.js"&gt;&lt;/script&gt; &lt;![endif]--&gt;</bdi></pre>
-    </li>
+  <li>
+    <h4 data-order="3"><bdi>HTML5shiv</bdi>:</h4>
+    <p>
+      دي مكتبة كانت بتستخدم زمان علشان متصفحات قديمة زي <bdi>Internet Explorer 9</bdi> تقدر تقرأ
+      عناصر <bdi>HTML5</bdi> الجديدة. اتكلمنا عنها في الكود التعليقي باستخدام الشرط:
+    </p>
+    <pre><bdi>&lt;!-- [if it IE 9] --&gt; &lt;script src="js/html5shiv.js"&gt;&lt;/script&gt; &lt;![endif]--&gt;</bdi></pre>
+  </li>
 
-    <li>
-      <h4 data-order="4"><bdi>BDI Element</bdi>:</h4>
-      <p>
-        <bdi>&lt;bdi&gt;</bdi> معناها <bdi>Bi-Directional Isolation</bdi> وبتُستخدم لما ندمج نصوص
-        بلغتين مختلفتين (زي العربي والإنجليزي) علشان الاتجاه ما يتلخبطش.
-      </p>
-      <p>مثال:</p>
-      <pre><bdi>&lt;p&gt; islam &lt;bdi&gt;إسلام&lt;/bdi&gt; : 90 points &lt;/p&gt;</bdi></pre>
-      <p>بيخلي الكلمة العربية تظهر باتجاهها الصحيح جوه النص الإنجليزي.</p>
-    </li>
+  <li>
+    <h4 data-order="4"><bdi>BDI Element</bdi>:</h4>
+    <p>
+      <bdi>&lt;bdi&gt;</bdi> معناها <bdi>Bi-Directional Isolation</bdi> وبتُستخدم لما ندمج نصوص
+      بلغتين مختلفتين (زي العربي والإنجليزي) علشان الاتجاه ما يتلخبطش.
+    </p>
+    <p>مثال:</p>
+    <pre><bdi>&lt;p&gt; islam &lt;bdi&gt;إسلام&lt;/bdi&gt; : 90 points &lt;/p&gt;</bdi></pre>
+    <p>بيخلي الكلمة العربية تظهر باتجاهها الصحيح جوه النص الإنجليزي.</p>
+  </li>
 
-    <li>
-      <h4 data-order="5"><bdi>Progress Element</bdi>:</h4>
-      <p>
-        العنصر <bdi>&lt;progress&gt;</bdi> بيعرض نسبة التقدم في عملية معينة، زي تحميل أو إنجاز مهمة.
-        بيتكتب بالشكل ده:
-      </p>
-      <pre><bdi>&lt;progress value="75" max="100"&gt;&lt;/progress&gt;</bdi></pre>
-      <p>ممكن تغير اللون والتصميم عن طريق الـ <bdi>CSS</bdi>:</p>
-      <pre><bdi>progress { width: 400px; height: 40px; }</bdi></pre>
-    </li>
+  <li>
+    <h4 data-order="5"><bdi>Progress Element</bdi>:</h4>
+    <p>
+      العنصر <bdi>&lt;progress&gt;</bdi> بيعرض نسبة التقدم في عملية معينة، زي تحميل أو إنجاز مهمة.
+      بيتكتب بالشكل ده:
+    </p>
+    <pre><bdi>&lt;progress value="75" max="100"&gt;&lt;/progress&gt;</bdi></pre>
+    <p>ممكن تغير اللون والتصميم عن طريق الـ <bdi>CSS</bdi>:</p>
+    <pre><bdi>progress { width: 400px; height: 40px; }</bdi></pre>
+  </li>
 
-    <li>
-      <h4 data-order="6"><bdi>New Input Types</bdi>:</h4>
-      <p>اتكلمنا عن أنواع إدخال جديدة اتضافت في <bdi>HTML5</bdi> لتسهيل التعامل مع البيانات:</p>
-      <ul>
-        <li>
-          <bdi>email</bdi> <i class="fa-solid fa-arrow-left"></i> يتحقق من وجود <bdi>@</bdi> في
-          البريد.
-        </li>
-        <li><bdi>url</bdi> <i class="fa-solid fa-arrow-left"></i> يقبل روابط فقط.</li>
-        <li><bdi>search</bdi> <i class="fa-solid fa-arrow-left"></i> لحقل بحث مخصص.</li>
-        <li>
-          <bdi>date</bdi> و<bdi>datetime-local</bdi> <i class="fa-solid fa-arrow-left"></i> لاختيار
-          تاريخ ووقت.
-        </li>
-        <li>
-          <bdi>number</bdi> <i class="fa-solid fa-arrow-left"></i> للأرقام فقط مع خصائص
-          <bdi>min</bdi> و<bdi>max</bdi> و<bdi>step</bdi>.
-        </li>
-        <li><bdi>file</bdi> <i class="fa-solid fa-arrow-left"></i> لاختيار ملفات من الجهاز.</li>
-      </ul>
-      <p>
-        كمان اتكلمنا عن الأنواع القديمة زي <bdi>text</bdi>، <bdi>password</bdi>، <bdi>radio</bdi>،
-        <bdi>checkbox</bdi>، <bdi>submit</bdi>، و<bdi>button</bdi>.
-      </p>
-    </li>
+  <li>
+    <h4 data-order="6"><bdi>New Input Types</bdi>:</h4>
+    <p>اتكلمنا عن أنواع إدخال جديدة اتضافت في <bdi>HTML5</bdi> لتسهيل التعامل مع البيانات:</p>
+    <ul>
+      <li>
+        <bdi>email</bdi> <i class="fa-solid fa-arrow-left"></i> يتحقق من وجود <bdi>@</bdi> في
+        البريد.
+      </li>
+      <li><bdi>url</bdi> <i class="fa-solid fa-arrow-left"></i> يقبل روابط فقط.</li>
+      <li><bdi>search</bdi> <i class="fa-solid fa-arrow-left"></i> لحقل بحث مخصص.</li>
+      <li>
+        <bdi>date</bdi> و<bdi>datetime-local</bdi> <i class="fa-solid fa-arrow-left"></i> لاختيار
+        تاريخ ووقت.
+      </li>
+      <li>
+        <bdi>number</bdi> <i class="fa-solid fa-arrow-left"></i> للأرقام فقط مع خصائص
+        <bdi>min</bdi> و<bdi>max</bdi> و<bdi>step</bdi>.
+      </li>
+      <li><bdi>file</bdi> <i class="fa-solid fa-arrow-left"></i> لاختيار ملفات من الجهاز.</li>
+    </ul>
+    <p>
+      كمان اتكلمنا عن الأنواع القديمة زي <bdi>text</bdi>، <bdi>password</bdi>، <bdi>radio</bdi>،
+      <bdi>checkbox</bdi>، <bdi>submit</bdi>، و<bdi>button</bdi>.
+    </p>
+  </li>
 
-    <li>
-      <h4 data-order="7"><bdi>:in-range & :out-of-range</bdi>:</h4>
-      <p>دي <bdi>pseudo-classes</bdi> بتغير تنسيق الحقول بناءً على القيمة اللي يدخلها المستخدم:</p>
-      <ul>
-        <li>
-          <bdi>input:in-range { background-color: green; }</bdi>
-          <i class="fa-solid fa-arrow-left"></i>
-          بيتلوّن بالأخضر لما القيمة ضمن النطاق.
-        </li>
-        <li>
-          <bdi>input:out-of-range { background-color: red; }</bdi>
-          <i class="fa-solid fa-arrow-left"></i>
-          بيتلوّن بالأحمر لما القيمة خارج النطاق.
-        </li>
-      </ul>
-      <p>دي بتفيد جدًا في التحقق من البيانات بطريقة تفاعلية من غير جافاسكريبت.</p>
-    </li>
-  </ol>
-  <h3><bdi>Notes</bdi></h3>
-  <ul>
-    <li>💡 العناصر الدلالية بتخلي موقعك منظم وسهل الفهم لمحركات البحث.</li>
-    <li>⚙️ استخدم عناصر <bdi>input</bdi> الحديثة علشان تحسّن تجربة المستخدم.</li>
-    <li>
-      🎨 خاصية <bdi>:in-range</bdi> و<bdi>:out-of-range</bdi> ممكن تستخدمها لأي نوع أرقام أو تواريخ.
-    </li>
-    <li>
-      🧠 العنصر <bdi>&lt;bdi&gt;</bdi> مفيد جدًا في المواقع اللي فيها لغتين (زي عربي وإنجليزي).
-    </li>
-  </ul>
-</div>
+  <li>
+    <h4 data-order="7"><bdi>:in-range & :out-of-range</bdi>:</h4>
+    <p>دي <bdi>pseudo-classes</bdi> بتغير تنسيق الحقول بناءً على القيمة اللي يدخلها المستخدم:</p>
+    <ul>
+      <li>
+        <bdi>input:in-range { background-color: green; }</bdi>
+        <i class="fa-solid fa-arrow-left"></i>
+        بيتلوّن بالأخضر لما القيمة ضمن النطاق.
+      </li>
+      <li>
+        <bdi>input:out-of-range { background-color: red; }</bdi>
+        <i class="fa-solid fa-arrow-left"></i>
+        بيتلوّن بالأحمر لما القيمة خارج النطاق.
+      </li>
+    </ul>
+    <p>دي بتفيد جدًا في التحقق من البيانات بطريقة تفاعلية من غير جافاسكريبت.</p>
+  </li>
+</ol>
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li>💡 العناصر الدلالية بتخلي موقعك منظم وسهل الفهم لمحركات البحث.</li>
+  <li>⚙️ استخدم عناصر <bdi>input</bdi> الحديثة علشان تحسّن تجربة المستخدم.</li>
+  <li>
+    🎨 خاصية <bdi>:in-range</bdi> و<bdi>:out-of-range</bdi> ممكن تستخدمها لأي نوع أرقام أو تواريخ.
+  </li>
+  <li>🧠 العنصر <bdi>&lt;bdi&gt;</bdi> مفيد جدًا في المواقع اللي فيها لغتين (زي عربي وإنجليزي).</li>
+</ul>
