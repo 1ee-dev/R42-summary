@@ -23,10 +23,13 @@
     <p>عندنا طريقتين رئيسيتين:</p>
     <ul>
       <li>
-        <bdi>CDN</bdi> (الطريقة الأسهل) <i class="fa-solid fa-arrow-left"></i> بنضيف روابط مكتبات <bdi>Bootstrap</bdi> الجاهزة في
-        <bdi>&lt;head&gt;</bdi>.
+        <bdi>CDN</bdi> (الطريقة الأسهل) <i class="fa-solid fa-arrow-left"></i> بنضيف روابط مكتبات
+        <bdi>Bootstrap</bdi> الجاهزة في <bdi>&lt;head&gt;</bdi>.
       </li>
-      <li><bdi>Download</bdi> <i class="fa-solid fa-arrow-left"></i> نحمل الملفات ونربطها يدويًا من مجلد المشروع.</li>
+      <li>
+        <bdi>Download</bdi> <i class="fa-solid fa-arrow-left"></i> نحمل الملفات ونربطها يدويًا من
+        مجلد المشروع.
+      </li>
     </ul>
 
     <p>مثال باستخدام <bdi>CDN</bdi>:</p>
@@ -91,13 +94,17 @@
     </p>
     <ul>
       <li>
-        <bdi>Buttons</bdi> <i class="fa-solid fa-arrow-left"></i> أزرار بألوان جاهزة زي <bdi>.btn-primary</bdi> و <bdi>.btn-danger</bdi>.
+        <bdi>Buttons</bdi> <i class="fa-solid fa-arrow-left"></i> أزرار بألوان جاهزة زي
+        <bdi>.btn-primary</bdi> و <bdi>.btn-danger</bdi>.
       </li>
       <li>
-        <bdi>Alerts</bdi> <i class="fa-solid fa-arrow-left"></i> تنبيهات جاهزة زي <bdi>.alert-success</bdi> أو <bdi>.alert-warning</bdi>.
+        <bdi>Alerts</bdi> <i class="fa-solid fa-arrow-left"></i> تنبيهات جاهزة زي
+        <bdi>.alert-success</bdi> أو <bdi>.alert-warning</bdi>.
       </li>
       <li><bdi>Cards</bdi> <i class="fa-solid fa-arrow-left"></i> لعرض المحتوى في مربعات أنيقة.</li>
-      <li><bdi>Navbar</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة تنقل جاهزة وسهلة التخصيص.</li>
+      <li>
+        <bdi>Navbar</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة تنقل جاهزة وسهلة التخصيص.
+      </li>
     </ul>
 
     <pre><bdi>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;
@@ -129,11 +136,80 @@
   </li>
 </ol>
 
+<h3><bdi>Bootstrap Versions</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1">الفروقات بين <bdi>Bootstrap 3</bdi> و <bdi>Bootstrap 4</bdi>:</h4>
+    <ul>
+      <li>
+        <b>نظام الشبكة (<bdi>Grid System</bdi>):</b>
+        <bdi>Bootstrap 3</bdi> كان بيستخدم <bdi>float</bdi>، أما <bdi>Bootstrap 4</bdi> فتحول
+        لاستخدام <bdi>Flexbox</bdi> وده خلى التحكم في التخطيط أسهل وأقوى.
+      </li>
+      <li>
+        <b>معالج <bdi>CSS</bdi> المسبق:</b>
+        <bdi>Bootstrap 3</bdi> استخدم <bdi>Less</bdi>، بينما <bdi>Bootstrap 4</bdi> استخدم
+        <bdi>Sass</bdi>.
+      </li>
+      <li>
+        <b>وحدات القياس:</b>
+        <bdi>Bootstrap 4</bdi> انتقل لاستخدام وحدات <bdi>rem</bdi> بدلًا من <bdi>px</bdi> في
+        <bdi>Bootstrap 3</bdi>، وده بيحسن تجاوب الخطوط والمكونات.
+      </li>
+      <li>
+        <b>المكونات:</b>
+        <bdi>Bootstrap 4</bdi> قدم مكون <bdi>Cards</bdi> كبديل لمكونات <bdi>Panels</bdi> و
+        <bdi>Wells</bdi> و <bdi>Thumbnails</bdi> في <bdi>Bootstrap 3</bdi>.
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h4 data-order="2">الفروقات بين <bdi>Bootstrap 4</bdi> و <bdi>Bootstrap 5</bdi>:</h4>
+    <ul>
+      <li>
+        <b>الاعتماد على <bdi>JavaScript</bdi>:</b>
+        أهم تغيير في <bdi>Bootstrap 5</bdi> هو إزالة الاعتماد على <bdi>jQuery</bdi> واستخدام
+        <bdi>Vanilla JavaScript</bdi>، وده خلى المكتبة أخف وأسرع.
+      </li>
+      <li>
+        <b>دعم المتصفحات:</b>
+        <bdi>Bootstrap 5</bdi> أسقط دعم متصفح <bdi>Internet Explorer 10</bdi> و
+        <bdi>11</bdi> للتركيز على المتصفحات الحديثة.
+      </li>
+      <li>
+        <b>نظام الشبكة:</b>
+        <bdi>Bootstrap 5</bdi> أضاف مستوى جديد للشبكة (<bdi>xxl</bdi>) للشاشات الكبيرة جدًا.
+      </li>
+      <li>
+        <b>التخصيص:</b>
+        <bdi>Bootstrap 5</bdi> قدم دعمًا لخصائص <bdi>CSS</bdi> المخصصة (<bdi
+          >CSS Custom Properties</bdi
+        >)، وده بيسهل تغيير الألوان والستايلات.
+      </li>
+      <li>
+        <b>الأيقونات:</b>
+        <bdi>Bootstrap 5</bdi> قدم مكتبة أيقونات <bdi>SVG</bdi> خاصة به.
+      </li>
+      <li>
+        <b>دعم <bdi>RTL</bdi>:</b>
+        <bdi>Bootstrap 5</bdi> أضاف دعمًا مدمجًا للغات اللي بتتكتب من اليمين لليسار
+        (<bdi>RTL</bdi>).
+      </li>
+    </ul>
+  </li>
+</ol>
+
 <h3><bdi>Notes</bdi></h3>
 <ul>
   <li>💡 <bdi>Bootstrap</bdi> بيوفرلك تصميم احترافي بسرعة من غير ما تكتب كود كتير.</li>
   <li>⚙️ دايمًا اربط ملف <bdi>JS</bdi> بتاع <bdi>Bootstrap</bdi> بعد <bdi>CSS</bdi>.</li>
   <li>📱 استخدم نظام الأعمدة لتصميم صفحات متجاوبة مع كل الأجهزة.</li>
   <li>🎨 تقدر تعدل على ستايلات <bdi>Bootstrap</bdi> بسهولة باستخدام ملف <bdi>CSS</bdi> منفصل.</li>
-  <li>📚 لازم تبحث وتتعلم أكتر عن <bdi>Bootstrap</bdi> لوحدك، لأن المكتبة كبيرة وفيها حاجات كتير مش هنقدر نغطيها كلها. زور <a href="https://getbootstrap.com/docs/" target="_blank">الموقع الرسمي</a> وجرب المكونات المختلفة.</li>
+  <li>
+    📚 لازم تبحث وتتعلم أكتر عن <bdi>Bootstrap</bdi> لوحدك، لأن المكتبة كبيرة وفيها حاجات كتير مش
+    هنقدر نغطيها كلها. زور
+    <a href="https://getbootstrap.com/docs/" target="_blank">الموقع الرسمي</a> وجرب المكونات
+    المختلفة.
+  </li>
 </ul>
