@@ -19,6 +19,9 @@ This is the template to be used for all lectures. It is important to follow this
 - The `<bdi>` tag is used to wrap all Arabic text to ensure proper rendering.
 - The `<code>` tag is not used. Instead, class names and code snippets are written directly in the text.
 - The Font Awesome arrow `<i class="fa-solid fa-arrow-left"></i>` is used to separate terms from their explanations.
+- The characters`:` and `()` should always be outside the `<bdi>` tag, unless they are part of a code example.
+- If parentheses `()` contain only English words, the entire content within the parentheses should be wrapped in a single `<bdi>` tag. For example: `(<bdi>English words</bdi>)`.
+- If parentheses `()` contain only Arabic words, do not wrap the content within the parentheses in a `<bdi>` tag.
 
 ```html
 <h3>
@@ -56,11 +59,3 @@ To add a new lecture to the website, follow these steps:
     *   `id`: The ID of the lecture (e.g., `lecXX`).
     *   `title`: The title of the lecture (e.g., `Lecture XX`).
     *   `group`: The group the lecture belongs to (e.g., `HTML & CSS`).
-
-## Generating Lecture Files
-
-A utility script, `content/generate-files.js`, is available to generate placeholder files for new lectures. To use it, run the following command in your terminal:
-
-```bash
-node content/generate-files.js
-```
