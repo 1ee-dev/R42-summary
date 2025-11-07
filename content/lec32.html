@@ -12,129 +12,163 @@
 <h3><bdi>Key Points</bdi></h3>
 <ol>
   <li>
-    <h4 data-order="1">ما هو <bdi>Bootstrap</bdi>?</h4>
+    <h4 data-order="1">Containers</h4>
     <p>
-      <bdi>Bootstrap</bdi> هو إطار عمل (<bdi>Framework</bdi>) جاهز بيجمع أدوات التنسيق في ملفات
-      <bdi>CSS</bdi> و <bdi>JS</bdi> بحيث تقدر تعمل تصميم احترافي بسرعة. اتطور في البداية من شركة
-      <bdi>Twitter</bdi> علشان يوحدوا شكل واجهاتهم.
+      <bdi>Bootstrap</bdi> بيستخدم <bdi>.container</bdi> لتوسيط المحتوى أفقيًا وتحديد عرض ثابت، أو
+      <bdi>.container-fluid</bdi> لجعل المحتوى يمتد بعرض الشاشة بالكامل.
     </p>
-  </li>
-
-  <li>
-    <h4 data-order="2">طريقة ربط <bdi>Bootstrap</bdi> بالموقع</h4>
-    <p>عندنا طريقتين رئيسيتين:</p>
     <ul>
       <li>
-        <bdi>CDN</bdi> (الطريقة الأسهل) <i class="fa-solid fa-arrow-left"></i> بنضيف روابط مكتبات
-        <bdi>Bootstrap</bdi> الجاهزة في <bdi>&lt;head&gt;</bdi>.
+        <bdi>.container</bdi> <i class="fa-solid fa-arrow-left"></i> يحدد عرضًا ثابتًا بناءً على حجم
+        الشاشة (breakpoint).
       </li>
       <li>
-        <bdi>Download</bdi> <i class="fa-solid fa-arrow-left"></i> نحمل الملفات ونربطها يدويًا من
-        مجلد المشروع.
+        <bdi>.container-fluid</bdi> <i class="fa-solid fa-arrow-left"></i> يأخذ دائمًا 100% من عرض
+        الشاشة.
       </li>
     </ul>
+    <pre><bdi>&lt;div class="container"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;
 
-    <p>مثال باستخدام <bdi>CDN</bdi>:</p>
-    <pre><bdi>(ملفات <bdi>css</bdi>)
-&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"&gt;
-
-(ملفات <bdi>js</bdi>)
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"&gt;&lt;/script&gt;</bdi></pre>
+&lt;div class="container-fluid"&gt;
+  &lt;!-- Full-width content here --&gt;
+&lt;/div&gt;</bdi></pre>
   </li>
 
   <li>
-    <h4 data-order="3"><bdi>Grid System</bdi>:</h4>
+    <h4 data-order="2">Grid System</h4>
     <p>
-      من أهم مميزات <bdi>Bootstrap</bdi> هو نظام الشبكة (<bdi>Grid</bdi>) اللي بيساعدك ترتب العناصر
-      في 12 عمود. كل صف بيتقسم لـ 12 جزء، وتقدر تحدد حجم كل عنصر حسب عدد الأعمدة اللي هياخدها.
+      نظام الشبكة هو أساس التصميم المتجاوب في <bdi>Bootstrap</bdi>. بيقسم الصفحة إلى 12 عمودًا،
+      وممكن تتحكم في عرض العناصر على مختلف أحجام الشاشات.
     </p>
+    <ul>
+      <li><bdi>.row</bdi> <i class="fa-solid fa-arrow-left"></i> حاوية للأعمدة (columns).</li>
+      <li>
+        <bdi>.col-*-*</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد عدد الأعمدة التي سيشغلها
+        العنصر. النجمة الأولى لحجم الشاشة (sm, md, lg, xl) والثانية لعدد الأعمدة (1-12).
+      </li>
+    </ul>
+    <p>أحجام الشاشات (Breakpoints):</p>
+    <ul>
+      <li>
+        <bdi>xs</bdi> (extra small) <i class="fa-solid fa-arrow-left"></i> &lt;576px (تلقائي، لا
+        يحتاج بادئة)
+      </li>
+      <li><bdi>sm</bdi> (small) <i class="fa-solid fa-arrow-left"></i> &ge;576px</li>
+      <li><bdi>md</bdi> (medium) <i class="fa-solid fa-arrow-left"></i> &ge;768px</li>
+      <li><bdi>lg</bdi> (large) <i class="fa-solid fa-arrow-left"></i> &ge;992px</li>
+      <li><bdi>xl</bdi> (extra large) <i class="fa-solid fa-arrow-left"></i> &ge;1200px</li>
+      <li><bdi>xxl</bdi> (extra extra large) <i class="fa-solid fa-arrow-left"></i> &ge;1400px</li>
+    </ul>
     <pre><bdi>&lt;div class="container"&gt;
   &lt;div class="row"&gt;
-    &lt;div class="col-4"&gt;Box 1&lt;/div&gt;
-    &lt;div class="col-4"&gt;Box 2&lt;/div&gt;
-    &lt;div class="col-4"&gt;Box 3&lt;/div&gt;
+    &lt;div class="col-md-6 col-sm-12"&gt;
+      &lt;!-- Takes 6 columns on medium screens and 12 on small --&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 col-sm-12"&gt;
+      &lt;!-- Takes 6 columns on medium screens and 12 on small --&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</bdi></pre>
-
-    <p>في المثال ده كل عنصر واخد 4 أعمدة من أصل 12، يعني 3 عناصر متساوية في صف واحد.</p>
   </li>
 
   <li>
-    <h4 data-order="4"><bdi>Responsive Design</bdi>:</h4>
-    <p>
-      <bdi>Bootstrap</bdi> بيتميز إنه <bdi>Responsive</bdi> يعني التصميم بيتكيف تلقائيًا مع حجم
-      الشاشة سواء موبايل أو تابلت أو كمبيوتر. وده من خلال الـ <code>breakpoints</code>:
-    </p>
+    <h4 data-order="3">Typography</h4>
+    <p><bdi>Bootstrap</bdi> بيوفر تنسيقات جاهزة للعناوين والنصوص.</p>
     <ul>
       <li>
-        <bdi>.col-sm-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;576px</bdi>)
-        للشاشات الصغيرة (موبايل) و الأكبر منها.
+        <bdi>.h1</bdi> - <bdi>.h6</bdi> <i class="fa-solid fa-arrow-left"></i> لتنسيق أي عنصر ليبدو
+        كعنوان.
       </li>
       <li>
-        <bdi>.col-md-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;678px</bdi>)
-        للشاشات المتوسطة (تابلت) و الأكبر منها.
+        <bdi>.lead</bdi> <i class="fa-solid fa-arrow-left"></i> لجعل الفقرة مميزة وأكبر حجمًا.
       </li>
-      <li>
-        <bdi>.col-lg-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;992px</bdi>)
-        للشاشات الكبيرة (لابتوب) و الأكبر منها.
-      </li>
-      <li>
-        <bdi>.col-xl-*</bdi> <i class="fa-solid fa-arrow-left"></i> (<bdi>&#8805;1200px</bdi>)
-        للشاشات الأكبر (ديسكتوب) و الأكبر منها.
-      </li>
+      <li><bdi>.text-muted</bdi> <i class="fa-solid fa-arrow-left"></i> لجعل النص باهتًا.</li>
     </ul>
-    <p>مثال:</p>
-    <pre><bdi>&lt;div class="col-sm-12 col-md-6 col-lg-4"&gt;Responsive Box&lt;/div&gt;</bdi></pre>
+    <pre><bdi>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p class="lead"&gt;This is a lead paragraph.&lt;/p&gt;
+&lt;p class="text-muted"&gt;This is muted text.&lt;/p&gt;</bdi></pre>
   </li>
 
   <li>
-    <h4 data-order="5">المكونات الجاهزة (<bdi>Components</bdi>):</h4>
-    <p>
-      <bdi>Bootstrap</bdi> بيحتوي على مكونات كتير جاهزة ممكن تستخدمها فورًا من غير كود
-      <bdi>CSS</bdi> إضافي:
-    </p>
+    <h4 data-order="4">Colors</h4>
+    <p>مجموعة ألوان جاهزة تقدر تستخدمها مع النصوص، الخلفيات، والأزرار.</p>
     <ul>
       <li>
-        <bdi>Buttons</bdi> <i class="fa-solid fa-arrow-left"></i> أزرار بألوان جاهزة زي
-        <bdi>.btn-primary</bdi> و <bdi>.btn-danger</bdi>.
+        <bdi>.text-*</bdi> <i class="fa-solid fa-arrow-left"></i> لتلوين النص (e.g.,
+        <bdi>.text-primary</bdi>, <bdi>.text-success</bdi>).
       </li>
       <li>
-        <bdi>Alerts</bdi> <i class="fa-solid fa-arrow-left"></i> تنبيهات جاهزة زي
-        <bdi>.alert-success</bdi> أو <bdi>.alert-warning</bdi>.
-      </li>
-      <li><bdi>Cards</bdi> <i class="fa-solid fa-arrow-left"></i> لعرض المحتوى في مربعات أنيقة.</li>
-      <li>
-        <bdi>Navbar</bdi> <i class="fa-solid fa-arrow-left"></i> قائمة تنقل جاهزة وسهلة التخصيص.
+        <bdi>.bg-*</bdi> <i class="fa-solid fa-arrow-left"></i> لتلوين الخلفية (e.g.,
+        <bdi>.bg-warning</bdi>, <bdi>.bg-danger</bdi>).
       </li>
     </ul>
-
-    <pre><bdi>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;
-&lt;div class="alert alert-success"&gt;تمت العملية بنجاح!&lt;/div&gt;</bdi></pre>
+    <pre><bdi>&lt;p class="text-primary"&gt;Primary text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text&lt;/p&gt;
+&lt;div class="bg-success text-white"&gt;Success background&lt;/div&gt;</bdi></pre>
   </li>
 
   <li>
-    <h4 data-order="6">ألوان <bdi>Bootstrap</bdi>:</h4>
-    <p>
-      بيقدم <bdi>Bootstrap</bdi> مجموعة ألوان جاهزة ممكن تستخدمها مباشرة للأزرار أو الخلفيات أو
-      النصوص:
-    </p>
+    <h4 data-order="5">Buttons</h4>
+    <p>أزرار بتصاميم وألوان مختلفة.</p>
     <ul>
-      <li><bdi>.text-primary</bdi> / <bdi>.bg-primary</bdi></li>
-      <li><bdi>.text-success</bdi> / <bdi>.bg-success</bdi></li>
-      <li><bdi>.text-danger</bdi> / <bdi>.bg-danger</bdi></li>
-      <li><bdi>.text-warning</bdi> / <bdi>.bg-warning</bdi></li>
-      <li><bdi>.text-info</bdi> / <bdi>.bg-info</bdi></li>
+      <li><bdi>.btn</bdi> <i class="fa-solid fa-arrow-left"></i> الكلاس الأساسي للزر.</li>
+      <li>
+        <bdi>.btn-*</bdi> <i class="fa-solid fa-arrow-left"></i> لتحديد اللون (e.g.,
+        <bdi>.btn-primary</bdi>, <bdi>.btn-dark</bdi>).
+      </li>
+      <li>
+        <bdi>.btn-outline-*</bdi> <i class="fa-solid fa-arrow-left"></i> لزر شفاف مع حدود ملونة.
+      </li>
+      <li>
+        <bdi>.btn-lg</bdi>, <bdi>.btn-sm</bdi> <i class="fa-solid fa-arrow-left"></i> لتغيير حجم
+        الزر.
+      </li>
     </ul>
+    <pre><bdi>&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-secondary btn-sm"&gt;Secondary Small&lt;/button&gt;</bdi></pre>
   </li>
 
   <li>
-    <h4 data-order="7"><bdi>Bootstrap JavaScript Components</bdi>:</h4>
-    <p>
-      المكونات اللي بتحتاج <bdi>JavaScript</bdi> زي <bdi>Modal</bdi> (النوافذ المنبثقة)،
-      <bdi>Carousel</bdi> (السلايدر)، و <bdi>Dropdown</bdi> (القوائم المنسدلة) بتشتغل تلقائيًا لما
-      نربط ملف <bdi>bootstrap.min.js</bdi>.
-    </p>
+    <h4 data-order="6">Button Groups</h4>
+    <p>تجميع الأزرار مع بعض في مجموعة واحدة.</p>
+    <ul>
+      <li><bdi>.btn-group</bdi> <i class="fa-solid fa-arrow-left"></i> لتجميع الأزرار أفقيًا.</li>
+      <li>
+        <bdi>.btn-group-vertical</bdi> <i class="fa-solid fa-arrow-left"></i> لتجميع الأزرار رأسيًا.
+      </li>
+      <li>
+        <bdi>.active</bdi> <i class="fa-solid fa-arrow-left"></i> لتمييز الزر النشط في المجموعة.
+      </li>
+    </ul>
+    <pre><bdi>&lt;div class="btn-group"&gt;
+  &lt;a href="#" class="btn btn-primary active"&gt;Active link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-primary"&gt;Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-primary"&gt;Link&lt;/a&gt;
+&lt;/div&gt;</bdi></pre>
+  </li>
+
+  <li>
+    <h4 data-order="7">Utility Classes</h4>
+    <p>كلاسات مساعدة بتسهل عليك التحكم في التنسيقات زي الهوامش والحشو والمحاذاة.</p>
+    <ul>
+      <li>
+        <bdi>m-*</bdi>, <bdi>p-*</bdi> <i class="fa-solid fa-arrow-left"></i> للتحكم في الهوامش
+        (margin) والحشو (padding). (e.g., <bdi>mt-5</bdi> for margin-top).
+      </li>
+      <li>
+        <bdi>text-*</bdi> <i class="fa-solid fa-arrow-left"></i> لمحاذاة النصوص (e.g.,
+        <bdi>text-center</bdi>, <bdi>text-end</bdi>).
+      </li>
+      <li>
+        <bdi>d-*</bdi> <i class="fa-solid fa-arrow-left"></i> للتحكم في خاصية العرض (display) (e.g.,
+        <bdi>d-flex</bdi>, <bdi>d-none</bdi>).
+      </li>
+    </ul>
+    <pre><bdi>&lt;div class="mt-5 mb-3"&gt;Margin top 5, margin bottom 3&lt;/div&gt;
+&lt;div class="p-4"&gt;Padding 4 on all sides&lt;/div&gt;
+&lt;p class="text-center"&gt;Centered text&lt;/p&gt;</bdi></pre>
   </li>
 </ol>
 

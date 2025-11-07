@@ -8,6 +8,45 @@ This is a static website, so there is no build process. To run the project, simp
 
 # Development Conventions
 
+## Language Convention
+
+Always use the Egyptian accent when writing in Arabic.
+
+## Lecture Template
+
+This is the template to be used for all lectures. It is important to follow this structure to maintain consistency across the website.
+
+- The `<bdi>` tag is used to wrap all Arabic text to ensure proper rendering.
+- The `<code>` tag is not used. Instead, class names and code snippets are written directly in the text.
+- The Font Awesome arrow `<i class="fa-solid fa-arrow-left"></i>` is used to separate terms from their explanations.
+
+```html
+<h3>
+  <bdi>Lecture Title</bdi>
+</h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  <bdi>A summary of the lecture.</bdi>
+</p>
+
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1"><bdi>Key Point 1</bdi></h4>
+    <p><bdi>Details about the first key point.</bdi></p>
+    <ul>
+      <li><bdi>Term</bdi> <i class="fa-solid fa-arrow-left"></i> <bdi>Explanation</bdi></li>
+    </ul>
+    <pre><bdi>Code example</bdi></pre>
+  </li>
+</ol>
+
+<h3><bdi>Notes</bdi></h3>
+<ul>
+  <li><bdi>An important note.</bdi></li>
+</ul>
+```
+
 ## Adding a New Lecture
 
 To add a new lecture to the website, follow these steps:
@@ -17,36 +56,6 @@ To add a new lecture to the website, follow these steps:
     *   `id`: The ID of the lecture (e.g., `lecXX`).
     *   `title`: The title of the lecture (e.g., `Lecture XX`).
     *   `group`: The group the lecture belongs to (e.g., `HTML & CSS`).
-
-## Lecture File Structure
-
-Each lecture file in the `content` directory should follow this structure, and the content should primarily be in Arabic:
-
-```html
-<h3><bdi>Lecture Title</bdi></h3>
-<h3><bdi>Summary</bdi></h3>
-<p>
-  A summary of the lecture.
-</p>
-
-<h3><bdi>Key Points</bdi></h3>
-<ol>
-  <li>
-    <h4 data-order="1">Key Point 1</h4>
-    <p>Details about the first key point.</p>
-  </li>
-  <li>
-    <h4 data-order="2">Key Point 2</h4>
-    <p>Details about the second key point.</p>
-  </li>
-</ol>
-
-<h3><bdi>Notes</bdi></h3>
-<ul>
-  <li>An important note.</li>
-  <li>Another important note.</li>
-</ul>
-```
 
 ## Generating Lecture Files
 
