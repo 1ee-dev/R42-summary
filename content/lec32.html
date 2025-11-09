@@ -179,9 +179,21 @@
         (<bdi>border</bdi>) (<bdi>e.g., border-primary, border-top</bdi>).
       </li>
       <li>
+        <bdi>rounded-*</bdi> <i class="fa-solid fa-arrow-left"></i> للتحكم في استدارة الحواف
+        (<bdi>border-radius</bdi>) (<bdi>e.g., rounded-pill, rounded-circle</bdi>).
+      </li>
+      <li>
+        <bdi>shadow-*</bdi> <i class="fa-solid fa-arrow-left"></i> لإضافة ظل للعنصر
+        (<bdi>box-shadow</bdi>) (<bdi>e.g., shadow-sm, shadow-lg</bdi>).
+      </li>
+      <li>
         <bdi>text-*</bdi> <i class="fa-solid fa-arrow-left"></i> لمحاذاة النصوص (<bdi
           >e.g., text-center, text-end</bdi
         >).
+      </li>
+      <li>
+        <bdi>fw-*</bdi> <i class="fa-solid fa-arrow-left"></i> للتحكم في وزن الخط
+        (<bdi>font-weight</bdi>) (<bdi>e.g., fw-bold, fw-normal</bdi>).
       </li>
       <li>
         <bdi>d-*</bdi> <i class="fa-solid fa-arrow-left"></i> للتحكم في خاصية العرض
@@ -189,10 +201,31 @@
       </li>
     </ul>
     <p>مثال:</p>
-    <pre><bdi>&lt;div class="mt-5 mb-3"&gt;Margin top 5, margin bottom 3&lt;/div&gt;
-&lt;div class="p-4"&gt;Padding 4 on all sides&lt;/div&gt;
-&lt;div class="border border-primary"&gt;Primary border&lt;/div&gt;
-&lt;p class="text-center"&gt;Centered text&lt;/p&gt;</bdi></pre>
+    <pre><bdi>&lt;!-- Margin and Padding --&gt;
+&lt;div class="mt-5 mb-3 bg-light p-2"&gt;Margin top 5, margin bottom 3&lt;/div&gt;
+&lt;div class="p-4 bg-light"&gt;Padding 4 on all sides&lt;/div&gt;
+
+&lt;!-- Borders --&gt;
+&lt;div class="border border-primary p-2 mb-2"&gt;Primary border&lt;/div&gt;
+&lt;div class="border-top border-success p-2 mb-2"&gt;Success border top&lt;/div&gt;
+&lt;div class="rounded-circle bg-light p-2 mb-2 text-center"&gt;Rounded circle&lt;/div&gt;
+&lt;div class="rounded-5 bg-light p-2 mb-2 text-center"&gt;Rounded edge&lt;/div&gt;
+
+&lt;!-- Shadow --&gt;
+&lt;div class="shadow-lg p-3 mb-5 bg-white rounded"&gt;Large shadow&lt;/div&gt;
+&lt;div class="shadow-sm p-3 mb-5 bg-white rounded"&gt;Small shadow&lt;/div&gt;
+
+&lt;!-- Text --&gt;
+&lt;p class="text-center"&gt;Centered text&lt;/p&gt;
+&lt;p class="fw-bold"&gt;Bold text&lt;/p&gt;
+&lt;p class="fw-normal"&gt;Normal weight text&lt;/p&gt;
+
+&lt;!-- Display --&gt;
+&lt;div class="d-flex justify-content-around bg-light p-2"&gt;
+  &lt;span&gt;Flex item 1&lt;/span&gt;
+  &lt;span&gt;Flex item 2&lt;/span&gt;
+  &lt;span&gt;Flex item 3&lt;/span&gt;
+&lt;/div&gt;</bdi></pre>
   </li>
 </ol>
 

@@ -22,6 +22,7 @@ This is the template to be used for all lectures. It is important to follow this
 - The characters`:` and `()` should always be outside the `<bdi>` tag, unless they are part of a code example.
 - If parentheses `()` contain only English words, the entire content within the parentheses should be wrapped in a single `<bdi>` tag. For example: `(<bdi>English words</bdi>)`.
 - If parentheses `()` contain only Arabic words, do not wrap the content within the parentheses in a `<bdi>` tag.
+- **Code Examples**: When providing code examples, especially for utility classes, each class should be demonstrated with a separate HTML element (e.g., `div` or `p`). The text content within the element should clearly explain the effect of the applied class.
 
 ```html
 <h3>
@@ -56,6 +57,6 @@ To add a new lecture to the website, follow these steps:
 
 1.  **Create a new HTML file** in the `content` directory. The file should be named following the pattern `lecXX.html`, where `XX` is the lecture number.
 2.  **Add the lecture to the `lectures` array** in `js/content-loader.js`. The entry should be an object with the following properties:
-    *   `id`: The ID of the lecture (e.g., `lecXX`).
-    *   `title`: The title of the lecture (e.g., `Lecture XX`).
-    *   `group`: The group the lecture belongs to (e.g., `HTML & CSS`).
+    - `id`: The ID of the lecture (e.g., `lecXX`).
+    - `title`: The title of the lecture (e.g., `Lecture XX`).
+    - `group`: The group the lecture belongs to (e.g., `HTML & CSS`).
