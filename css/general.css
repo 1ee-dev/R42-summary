@@ -122,6 +122,10 @@ small {
   font-size: var(--fs-6);
 }
 
+span {
+  display: inline-block;
+}
+
 button {
   cursor: pointer;
   border: none;

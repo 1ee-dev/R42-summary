@@ -270,10 +270,6 @@ article pre {
   color: var(--text-black);
   text-align: left;
 }
-
-article span {
-  color: hsl(from var(--color-primary) h s calc(l + 20));
-}
 /* End Main Content Style */
 
 /* Footer Style */
