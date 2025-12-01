@@ -160,7 +160,16 @@ const lectures = [
     title: 'Lecture 32',
     group: 'Bootstrap',
   },
-
+  {
+    id: 'lec33',
+    title: 'Lecture 33',
+    group: 'JavaScript',
+  },
+  {
+    id: 'lec34',
+    title: 'Lecture 34',
+    group: 'JavaScript',
+  },
 ];
 
 const groups = ['HTML & CSS', 'GitHub', 'HTML5 & CSS3', 'JavaScript', 'Bootstrap'];

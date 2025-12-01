@@ -1,0 +1,205 @@
+<h3>
+  <bdi>JavaScript: DOM, Objects, and Functions</bdi>
+</h3>
+<h3><bdi>Summary</bdi></h3>
+<p>
+  في هذه المحاضرة، سنتناول مواضيع متقدمة في <bdi>JavaScript</bdi>، بما في ذلك كيفية التعامل مع
+  <bdi>Document Object Model (DOM)</bdi> لتغيير محتوى الصفحة، والطرق المختلفة لإنشاء الكائنات
+  <bdi>(Objects)</bdi>، والفرق بين الدوال العادية والدوال السهمية <bdi>(Arrow Functions)</bdi>.
+</p>
+
+<h3><bdi>Key Points</bdi></h3>
+<ol>
+  <li>
+    <h4 data-order="1">اختيار العناصر (<bdi>Selecting Elements</bdi>):</h4>
+    <ul>
+      <li>
+        <bdi>getElementById</bdi> <i class="fa-solid fa-arrow-left"></i> تختار
+        <bdi>element</bdi> واحد فقط عن طريق الـ <bdi>id</bdi> الخاص به.
+        <pre><bdi>var title = document.getElementById("main-title");</bdi></pre>
+      </li>
+      <li>
+        <bdi>getElementsByClassName</bdi> <i class="fa-solid fa-arrow-left"></i> تختار كل العناصر
+        التي تشترك في <bdi>class</bdi> معين، وترجعهم في شكل <bdi>HTMLCollection</bdi> (يحتوي على
+        <bdi>elements</bdi> فقط).
+        <pre><bdi>var items = document.getElementsByClassName("list-item");</bdi></pre>
+      </li>
+      <li>
+        <bdi>querySelector</bdi> <i class="fa-solid fa-arrow-left"></i> تختار أول
+        <bdi>element</bdi> يطابق <bdi>CSS selector</bdi> معين.
+        <pre><bdi>var firstItem = document.querySelector(".list-item");</bdi></pre>
+      </li>
+      <li>
+        <bdi>querySelectorAll</bdi> <i class="fa-solid fa-arrow-left"></i> تختار كل العناصر التي
+        تطابق <bdi>CSS selector</bdi> معين، وترجعهم في شكل <bdi>NodeList</bdi> (يمكن أن يحتوي على أي
+        نوع من الـ <bdi>nodes</bdi>).
+        <pre><bdi>var allItems = document.querySelectorAll("li");</bdi></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 data-order="2">تعديل العناصر (<bdi>Modifying Elements</bdi>):</h4>
+    <ul>
+      <li>
+        <bdi>innerText</bdi> / <bdi>textContent</bdi> <i class="fa-solid fa-arrow-left"></i> لتغيير
+        المحتوى النصي للعنصر.
+        <pre><bdi>title.innerText = "Welcome Ziad";</bdi></pre>
+      </li>
+      <li>
+        <bdi>style</bdi> <i class="fa-solid fa-arrow-left"></i> لتغيير التنسيق الخاص بالعنصر مباشرة.
+        <pre><bdi>title.style.color = "blue";</bdi></pre>
+      </li>
+      <li>
+        <bdi>setAttribute</bdi> <i class="fa-solid fa-arrow-left"></i> لإضافة أو تعديل
+        <bdi>attribute</bdi> معين للعنصر.
+        <pre><bdi>title.setAttribute("price", "7000 LE");</bdi></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 data-order="3">التنقل في الـ <bdi>DOM</bdi> (<bdi>Traversing</bdi>):</h4>
+    <ul>
+      <li>
+        <bdi>parentElement</bdi> <i class="fa-solid fa-arrow-left"></i> للوصول إلى العنصر الأب (<bdi
+          >element node</bdi
+        >). دائمًا يرجع <bdi>element</bdi> أو <bdi>null</bdi>.
+        <pre><bdi>console.log(title.parentElement);</bdi></pre>
+      </li>
+      <li>
+        <bdi>parentNode</bdi> <i class="fa-solid fa-arrow-left"></i> للوصول إلى الأب
+        (<bdi>node</bdi>) مباشرة، والذي قد لا يكون <bdi>element</bdi>.
+        <pre><bdi>console.log(title.parentNode);</bdi></pre>
+      </li>
+      <li>
+        <bdi>children</bdi> <i class="fa-solid fa-arrow-left"></i> للوصول إلى العناصر الأبناء (<bdi
+          >element nodes</bdi
+        >
+        فقط).
+        <pre><bdi>var form = document.querySelector("form");
+console.log(form.children);</bdi></pre>
+      </li>
+      <li>
+        <bdi>childNodes</bdi> <i class="fa-solid fa-arrow-left"></i> للوصول إلى كل الأبناء (<bdi
+          >all nodes</bdi
+        >)، بما في ذلك النصوص والمسافات والتعليقات.
+        <pre><bdi>var form = document.querySelector("form");
+console.log(form.childNodes);</bdi></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 data-order="4">إنشاء وإضافة العناصر (<bdi>Creating & Inserting</bdi>):</h4>
+    <ul>
+      <li>
+        <bdi>createElement</bdi> <i class="fa-solid fa-arrow-left"></i> لإنشاء
+        <bdi>element node</bdi> جديد (مثل <bdi>div</bdi>, <bdi>p</bdi>).
+        <pre><bdi>var newDiv = document.createElement("div");</bdi></pre>
+      </li>
+      <li>
+        <bdi>createTextNode</bdi> <i class="fa-solid fa-arrow-left"></i> لإنشاء
+        <bdi>text node</bdi> جديد.
+        <pre><bdi>var newText = document.createTextNode("Hello World");</bdi></pre>
+      </li>
+      <li>
+        <bdi>appendChild</bdi> <i class="fa-solid fa-arrow-left"></i> لإضافة <bdi>node</bdi> كآخر
+        ابن لعنصر آخر.
+        <pre><bdi>newDiv.appendChild(newText);
+document.body.appendChild(newDiv);</bdi></pre>
+      </li>
+      <li>
+        <bdi>insertBefore</bdi> <i class="fa-solid fa-arrow-left"></i> لإضافة <bdi>node</bdi> قبل
+        عنصر آخر محدد.
+        <pre><bdi>var container = document.querySelector(".container");
+var existingElement = document.querySelector(".existing-element");
+container.insertBefore(newDiv, existingElement);</bdi></pre>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h4 data-order="5"><bdi>Object Creation</bdi> (إنشاء الكائنات):</h4>
+    <p>الكائنات هي جزء أساسي في <bdi>JavaScript</bdi>، وهناك عدة طرق لإنشائها.</p>
+    <ul>
+      <li>
+        <bdi>Object Literal</bdi> <i class="fa-solid fa-arrow-left"></i>
+        الطريقة الأبسط والأكثر شيوعًا لإنشاء كائن.
+      </li>
+      <li>
+        <bdi>new Object()</bdi> <i class="fa-solid fa-arrow-left"></i>
+        طريقة أخرى لإنشاء كائن فارغ ثم إضافة الخصائص له.
+      </li>
+      <li>
+        <bdi>Object.create()</bdi> <i class="fa-solid fa-arrow-left"></i> تستخدم لإنشاء كائن جديد،
+        مع تحديد كائن آخر كـ <bdi>prototype</bdi> له.
+      </li>
+    </ul>
+    <pre><bdi>// Object Literal
+var person1 = {
+  name: "Islam",
+  age: "26"
+};
+console.log(person1.name); // "Islam"
+
+// new Object()
+var person2 = new Object();
+person2.name = "Mohamed";
+person2.age = "40";
+console.log(person2.name); // "Mohamed"
+
+// Object.create()
+var basePerson = {};
+var person3 = Object.create(basePerson, {
+  name: { value: "Ismail" },
+  age: { value: "28" }
+});
+console.log(person3.name); // "Ismail"
+</bdi></pre>
+  </li>
+
+  <li>
+    <h4 data-order="6"><bdi>Functions</bdi> (الدوال):</h4>
+    <p>هناك طرق مختلفة لتعريف الدوال في <bdi>JavaScript</bdi>، ولكل منها استخداماتها.</p>
+    <ul>
+      <li>
+        <bdi>Regular Function</bdi> <i class="fa-solid fa-arrow-left"></i> الدالة التقليدية التي يتم
+        تعريفها باستخدام كلمة <bdi>function</bdi>.
+      </li>
+      <li>
+        <bdi>Arrow Function</bdi> <i class="fa-solid fa-arrow-left"></i> صيغة أحدث وأقصر لكتابة
+        الدوال، تم تقديمها في <bdi>ES6</bdi>.
+      </li>
+    </ul>
+    <pre><bdi>// Regular Function
+function multiply(x, y) {
+  console.log(x * y);
+}
+multiply(7, 8); // 56
+
+// Arrow Function
+var multiplyArrow = (x, y) => {
+  console.log(x * y);
+};
+multiplyArrow(8, 9); // 72
+
+// Arrow Function (Short Syntax)
+var multiplyShort = (x, y) => console.log(x * y);
+multiplyShort(5, 8); // 40
+</bdi></pre>
+  </li>
+</ol>
+
+<h3><bdi>Key Points</bdi></h3>
+<ul>
+  <li>
+    💡 عند التعامل مع الـ <bdi>DOM</bdi>، من الأفضل استخدام <bdi>const</bdi> لتعريف المتغيرات التي
+    تحمل عناصر <bdi>HTML</bdi> لضمان عدم إعادة إسنادها عن طريق الخطأ.
+  </li>
+  <li>
+    ⚙️ استخدام <bdi>Object Literals</bdi> هو الطريقة المفضلة لإنشاء الكائنات في معظم الحالات
+    لسهولتها ووضوحها.
+  </li>
+  <li>
+    🧠 الدوال السهمية (<bdi>Arrow Functions</bdi>) مفيدة جدًا للكود القصير، لكنها تختلف عن الدوال
+    العادية في طريقة تعاملها مع <bdi>this</bdi>.
+  </li>
+</ul>
